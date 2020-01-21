@@ -1,45 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ba-starter</title>
+    <title>looks-shop</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/app.css">
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
     <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
 
     <header class="ba-header">
-        <div class="container">
-
-            <a href="#" class="ba-logo"></a>
-
-            <nav>
-                <ul class="ba-menu">
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item 1</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item 2</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item 3</a>
-                    </li>
-                    <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item 4</a>
-                    </li>
-                </ul>
-            </nav>
-
+        <div class="ba-header-top">
+            <div class="container">
+                <div class="ba-header-top__custom">custom care: 888-23-4567</div>
+                <div class="user">
+                    <div class="user__currency">$us</div>
+                    <div class="user__account">my account</div>
+                    <div class="user__search">search</div>
+                </div>
+            </div>
+        </div>
+        <div class="ba-header-main">
+            <div class="container">
+                <a class="ba-header-main__logo" href="#" class="ba-logo"><img src="./img/logo.png" alt="logo"></a>
+                <nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">new</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">designers</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">women</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">men</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">clearance</a>
+                        </li>
+                        <li class="ba-menu__item card">
+                            <a href="#" class="ba-menu__link">card</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="ba-slider1">
+            <div>
+                <img src="./img/banner.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/banner.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/banner.jpg" alt="">
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="ba-section">
+
+        <section class="">
+            <div class="container">
+                <div class="subscribe">
+                    <div class="subscribe-mail"><span>Stay updated</span>
+                        <input type="text" placeholder="Your email address">
+                        <button>+</button>
+                    </div>
+
+                    <div class="ba-social">
+                        <span>Find us here</span>
+                        <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="baners ba-row">
+                    <div class="ba-col-6">
+                        <img src="./img/best_outfits.jpg" alt="">
+                    </div>
+                    <div class="ba-col-6">
+                        <div class="ba-row">
+                            <img src="./img/party_collection.jpg" alt="">
+                        </div>
+                        <div class="ba-row">
+                            <div class="ba-col-6">
+                                <img src="./img/best_sellers.jpg" alt="">
+                            </div>
+                            <div class="ba-col-6">
+                                <img src="./img/fall_leather.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="">
             <div class="container">
 
             </div>
@@ -49,6 +122,13 @@
     <footer class="ba-footer">
         <div class="container"></div>
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/1c19972f1c.js" crossorigin="anonymous"></script>
+
+    <script src='./js/index.js'></script>
 </body>
+
 </html>
