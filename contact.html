@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>looks-shop</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/app.css">
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <header class="ba-header">
+        <div class="ba-header-top">
+            <div class="container">
+                <div class="ba-header-top-contacts">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                        8 800 123 45 67
+                    </span>
+                    <a href="./contact.html">
+                        Контакты
+                    </a>
+                </div>
+                <div class="user">
+                    <div class="user__currency">$us</div>
+                    <div class="user__account">личный кабинет</div>
+                    <div class="user__search"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="ba-header-main">
+            <div class="container">
+                <a class="ba-header-main__logo" href="./index.html" class="ba-logo"><img src="./img/logo.png"
+                        alt="logo"></a>
+                <nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Новинки</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Дизайнеры</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Женщинам</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Мужчинам</a>
+                        </li>
+                        <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Sale</a>
+                        </li>
+                        <li class="ba-menu__item card">
+                            <a href="#" class="ba-menu__link">card</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="ba-slider1">
+                <div>
+                    <!-- <img src="./img/crazy_summer.png" alt=""> -->
+                    <img src="./img/banner.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/banner.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/banner.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="ba-section6-map scroll-to" id="map">
+                <script>
+                    function initMap() {
+                        let map;
+                        let nolan = { lat: 40.6863028, lng: -73.9072198 };
+                        let myCenter = { lat: 40.673443, lng: -73.896206 };
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: myCenter,
+                            // height: 700,
+                            // icon: './img/pin.png',
+                            // icon: './img/cupcake.svg',
+                            zoom: 14,
+                            styles: [
+                                {
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#f5f5f5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.icon",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#616161"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.text.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#f5f5f5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative.land_parcel",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#bdbdbd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#eeeeee"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#757575"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi.park",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#e5e5e5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi.park",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#9e9e9e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.arterial",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#757575"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#dadada"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#616161"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#9e9e9e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "transit.line",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#e5e5e5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "transit.station",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#eeeeee"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#c9c9c9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#9e9e9e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        });
+
+                        let marker = new google.maps.Marker({
+                            position: nolan,
+                            map: map,
+                            // title: '123',
+
+                            icon: {
+                                url: './img/pin.png',
+                                origin: new google.maps.Point(0, 0),
+                                size: new google.maps.Size(62, 62)
+                                // anchor: new google.maps.Anchor(62, 62),
+                            }
+                        });
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ&callback=initMap"></script>
+                <!-- AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ -->
+                <!-- https://maps.googleapis.com/maps/api/staticmap?key=YOUR_API_KEY&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="ba-footer">
+        <div class="container">
+            <span>© Lookshop.com, 2020 All Rights Reserved</span>
+            <div>Покупателю</div>
+            <div>О компании</div>
+            <div>Контакты
+                <div class="ba-social">
+                    <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/1c19972f1c.js" crossorigin="anonymous"></script>
+
+    <script src='./js/index.js'></script>
+</body>
+
+</html>

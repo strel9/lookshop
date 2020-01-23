@@ -23,50 +23,67 @@
     <header class="ba-header">
         <div class="ba-header-top">
             <div class="container">
-                <div class="ba-header-top__custom">custom care: 888-23-4567</div>
-                <div class="user">
-                    <div class="user__currency">$us</div>
-                    <div class="user__account">my account</div>
-                    <div class="user__search">search</div>
+                <div class="ba-header-top-contacts">
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                        8 800 123 45 67
+                    </span>
+                    <a href="./contact.html">
+                        Контакты
+                    </a>
+                </div>
+                <div class="ba-header-top-user">
+                    <div class="user__currency">$us<span><i class="fas fa-sort-down"></i></span></div>
+                    <div class="user__account">личный кабинет</div>
+                    <div class="user__search"><i class="fas fa-search"></i></div>
                 </div>
             </div>
         </div>
         <div class="ba-header-main">
             <div class="container">
-                <a class="ba-header-main__logo" href="#" class="ba-logo"><img src="./img/logo.png" alt="logo"></a>
+                <a class="ba-header-main__logo" href="./index.html" class="ba-logo"><img src="./img/logo.png"
+                        alt="logo"></a>
                 <nav>
                     <ul class="ba-menu">
                         <li class="ba-menu__item">
-                            <a href="#" class="ba-menu__link">new</a>
+                            <a href="#" class="ba-menu__link">Новинки<span><i class="fas fa-sort-down"></i></span></a>
                         </li>
                         <li class="ba-menu__item">
-                            <a href="#" class="ba-menu__link">designers</a>
+                            <a href="#" class="ba-menu__link">Дизайнеры<span><i class="fas fa-sort-down"></i></span></a>
+                        </li>
+                        <!-- <li class="ba-menu__item">
+                            <a href="#" class="ba-menu__link">Женщинам<span><i class="fas fa-sort-down"></i></span></a>
                         </li>
                         <li class="ba-menu__item">
-                            <a href="#" class="ba-menu__link">women</a>
-                        </li>
+                            <a href="#" class="ba-menu__link">Мужчинам<span><i class="fas fa-sort-down"></i></span></a>
+                        </li> -->
                         <li class="ba-menu__item">
-                            <a href="#" class="ba-menu__link">men</a>
-                        </li>
-                        <li class="ba-menu__item">
-                            <a href="#" class="ba-menu__link">clearance</a>
-                        </li>
-                        <li class="ba-menu__item card">
-                            <a href="#" class="ba-menu__link">card</a>
+                            <a href="#" class="ba-menu__link">Sale<span><i class="fas fa-sort-down"></i></span></a>
                         </li>
                     </ul>
                 </nav>
+                <div class="col-md-3 col-sm-4 col-xs-12  pull-right clearfix">
+                    <a href="#" id="cart">
+                        <div>
+                            <img src="./img/cart.png" alt="cart">
+                        </div>
+                        <!-- <span class="pull-right">0 items | $ 0</span> -->
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="ba-slider1">
-            <div>
-                <img src="./img/banner.jpg" alt="">
-            </div>
-            <div>
-                <img src="./img/banner.jpg" alt="">
-            </div>
-            <div>
-                <img src="./img/banner.jpg" alt="">
+        <div class="container">
+            <div class="ba-slider1">
+                <div>
+                    <!-- <img src="./img/crazy_summer.png" alt=""> -->
+                    <img src="./img/banner.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/banner.jpg" alt="">
+                </div>
+                <div>
+                    <img src="./img/banner.jpg" alt="">
+                </div>
             </div>
         </div>
     </header>
@@ -74,54 +91,178 @@
     <main>
 
         <section class="">
-            <div class="container">
-                <div class="subscribe">
-                    <div class="subscribe-mail"><span>Stay updated</span>
-                        <input type="text" placeholder="Your email address">
-                        <button>+</button>
+            <div class="subscribe">
+                <div class="container">
+                    <div class="subscribe-mail"><span>Подписаться</span>
+                        <input type="text" placeholder="Ваш email">
+                        <button class="btn"><i class="fas fa-plus"></i></button>
                     </div>
 
                     <div class="ba-social">
-                        <span>Find us here</span>
+                        <span>Мы здесь</span>
                         <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                         <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                         <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="baners ba-row">
-                    <div class="ba-col-6">
-                        <img src="./img/best_outfits.jpg" alt="">
-                    </div>
-                    <div class="ba-col-6">
-                        <div class="ba-row">
-                            <img src="./img/party_collection.jpg" alt="">
-                        </div>
-                        <div class="ba-row">
-                            <div class="ba-col-6">
-                                <img src="./img/best_sellers.jpg" alt="">
-                            </div>
-                            <div class="ba-col-6">
-                                <img src="./img/fall_leather.jpg" alt="">
-                            </div>
-                        </div>
 
-                    </div>
 
+            </div>
+            <div class="baners">
+                <div class="container">
+                    <div class="ba-row">
+                        <div class="ba-col-6">
+                            <img src="./img/best_outfits.jpg" alt="">
+                        </div>
+                        <div class="ba-col-6">
+                            <div class="ba-row">
+                                <img src="./img/party_collection.jpg" alt="">
+                            </div>
+                            <div class="ba-row">
+                                <div class="ba-col-6">
+                                    <img src="./img/best_sellers.jpg" alt="">
+                                </div>
+                                <div class="ba-col-6">
+                                    <img src="./img/fall_leather.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
         </section>
 
         <section class="">
             <div class="container">
+                <div class="ba-row goods-wrapper">
+                    <!-- <div class="card">
+                        <img class="" src="./img/girl_2.jpg">
+                        <p>Atmos&Here Shopper</p>
+                        <p class="card-price">$49.95</p>
+                        <a class="card-btn" href="#" role="button">Shop now <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="card">
+                        <img class="" src="./img/girl_2.jpg">
+                        <p>Atmos&Here Shopper</p>
+                        <p class="card-price">$49.95</p>
+                        <a class="card-btn" href="#" role="button">Shop now <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="card">
+                        <img class="" src="./img/girl_2.jpg">
+                        <p>Atmos&Here Shopper</p>
+                        <p class="card-price">$49.95</p>
+                        <a class="card-btn" href="#" role="button">Shop now <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                    </div> -->
 
+                </div>
+            </div>
+        </section>
+
+        <section class="ba-brands">
+            <div class="container">
+                <div>
+                    <img src="./img/brand_1.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_2.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_3.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_4.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_5.png" alt="" class="brands-items">
+
+                </div>
+                <div>
+                    <img src="./img/brand_6.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_7.png" alt="" class="brands-items">
+                </div>
+                <div>
+                    <img src="./img/brand_8.png" alt="" class="brands-items">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="ba-about">
+            <div class="container">
+                <h2>About LookShop</h2>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                    sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                    Duis
+                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
+                    tellus a
+                    odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class
+                    aptent
+                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
+                    Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
             </div>
         </section>
     </main>
 
     <footer class="ba-footer">
-        <div class="container"></div>
+        <div class="container">
+            <span>© Lookshop.com, 2020 All Rights Reserved</span>
+            <div>Покупателю</div>
+            <div>О компании</div>
+            <div>Контакты
+                <div class="ba-social">
+                    <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <div class="cart">
+        <div class="cart-body">
+            <div class="cart-head">
+                <div class="cart-title">Корзина</div>
+                <div class="cart-total">Общая сумма: <span>0</span> руб</div>
+            </div>
+
+            <div class="cart-wrapper">
+                <div id="cart-empty">
+                    Ваша корзина пока пуста
+                </div>
+
+                <div class="goods">
+                    <div class="goods-img-wrapper">
+                        <img class="goods-img" src="img/temp.png" alt="">
+
+                    </div>
+                    <div class="goods-description">
+                        <h2 class="goods-title">Название товара</h2>
+                        <p class="goods-price">100000 ₽</p>
+
+                    </div>
+                    <div class="goods-price-count">
+                        <div class="goods-trigger">
+                            <button class="goods-add-wishlist"></button>
+                            <button class="goods-delete"></button>
+                        </div>
+                        <div class="goods-count">1</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button class="btn btn-primary cart-confirm">Оформить заказ</button>
+            <div class="cart-close">
+
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 

@@ -73,10 +73,16 @@
 
 .ba-header-top .container {
   display: flex;
-  justify-content: space-around;
-  color: #fff;
+  justify-content: space-between;
+  color: #fff; }
+
+.ba-header-top {
   background-color: #000; }
-  .ba-header-top .container .user {
+  .ba-header-top-contacts {
+    color: #fff; }
+    .ba-header-top-contacts a {
+      color: inherit; }
+  .ba-header-top-user {
     display: flex;
     justify-content: space-between; }
 
@@ -94,21 +100,151 @@
     text-decoration: none; }
 
 .subscribe {
-  color: #6c6c6c;
+  background-color: #ededed;
+  color: #6c6c6c; }
+
+.subscribe .container {
   display: flex;
-  justify-content: space-around;
-  background-color: #ededed; }
-  .subscribe .ba-social {
+  justify-content: space-between; }
+
+.ba-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .ba-social__items {
+    color: #6c6c6c; }
+
+.goods-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: #fd926d;
+  margin: 25px auto 0;
+  padding-bottom: 10px; }
+
+.card {
+  background-color: #f7f7f7; }
+
+.ba-brands .container {
+  display: flex;
+  justify-content: space-between; }
+
+.ba-footer {
+  background-color: #000; }
+  .ba-footer .container {
+    color: #fff;
     display: flex;
+    justify-content: space-between; }
+
+.cart {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  z-index: 130; }
+  .cart-body {
+    position: relative;
+    margin: auto;
+    width: 1024px;
+    min-height: 200px;
+    max-height: 80vh;
+    background-color: #fff;
+    padding: 25px;
+    overflow: auto;
+    border-radius: 3px; }
+  .cart-title {
+    font-size: 28px;
+    color: #4d5f71; }
+  .cart-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    background-color: #f2f2f2;
+    border: 1px solid #4d5f713f;
+    border-radius: 3px;
+    padding: 20px; }
+    .cart-wrapper #cart-empty {
+      font-size: 24px;
+      color: #4d5f71; }
+  .cart-head {
+    display: flex;
+    justify-content: space-between; }
+  .cart-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='005bff' d='M12 10.587l6.293-6.294a1 1 0 111.414 1.414l-6.293 6.295 6.293 6.294a1 1 0 11-1.414 1.414L12 13.416 5.707 19.71a1 1 0 01-1.414-1.414l6.293-6.294-6.293-6.295a1 1 0 011.414-1.414L12 10.587z'/%3E%3C/svg%3E"); }
+    .cart-close:hover {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
+  .cart-total {
+    font-size: 28px; }
+    .cart-total span {
+      color: #077c24; }
+  .cart-confirm {
+    display: block;
+    margin-left: auto; }
+  .cart .goods {
+    display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center; }
-    .subscribe .ba-social__items {
-      color: inherit; }
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px; }
+    .cart .goods-img {
+      max-width: 120px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px; }
+      .cart .goods-img-wrapper {
+        flex-basis: 120px; }
+    .cart .goods-description {
+      padding: 10px;
+      flex-grow: 1; }
+    .cart .goods-title {
+      font-size: 16px; }
+    .cart .goods-price-count {
+      padding-right: 10px; }
+    .cart .goods-trigger {
+      display: flex;
+      justify-content: center; }
+    .cart .goods-add-wishlist {
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      background-position: 4px -2589px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      border: none; }
+      .cart .goods-add-wishlist.active {
+        background-position: 4px -2633px; }
+    .cart .goods-delete {
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      background-position: 8px -1865px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      border: none; }
+    .cart .goods-count {
+      display: flex;
+      justify-content: center; }
+    .cart .goods-count-total {
+      width: 32px; }
 
 .btn {
-  background: pink;
-  min-width: 100px;
+  text-decoration: none;
+  background: #fd926d;
+  color: #fff;
   padding: 0 1em; }
   .btn:hover {
     background-color: pink;
-    border-color: #ff748c; }
+    border-color: #fc5a22; }
