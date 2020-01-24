@@ -7,7 +7,10 @@
 	}
 
 	&-top {
-		background-color: #000;
+		background-color: $secondaryColor;
+		height: 2em;
+		display: flex;
+		align-items: center;
 
 		&-contacts {
 			color: #fff;
@@ -28,6 +31,7 @@
 
 	&-main .container {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 	}
 }
@@ -87,16 +91,18 @@
 
 .ba-brands .container {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
 .ba-footer {
-	background-color: #000;
+	background-color: $secondaryColor;
 
 	& .container {
 		color: #fff;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 }
@@ -257,6 +263,34 @@
 	}
 }
 
+.cart-menu {
+	&-favorites {
+		position: relative;
+	}
+
+	&-cart {
+		position: relative;
+	}
+
+	&-counter {
+		position: absolute;
+		right: -10px;
+		height: 16px;
+		border-radius: 8px;
+		padding: 0 8px;
+		background-color: $primaryColor;
+		color: #fff;
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
+
+// #cart {
+// 	background-image: url(../img/cart.png);
+// }
+.ba-section6-map {
+	height: 400px;
+}
 
 .btn {
 	text-decoration: none;

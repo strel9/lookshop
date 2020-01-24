@@ -71,13 +71,74 @@
 .ba-text-justify {
   text-align: justify; }
 
+@media screen and (min-width: 768px) {
+  .ba-col-sm-12 {
+    width: 100%; }
+  .ba-col-sm-11 {
+    width: 96.66%; }
+  .ba-col-sm-10 {
+    width: 83.3%; }
+  .ba-col-sm-9 {
+    width: 74.97%; }
+  .ba-col-sm-8 {
+    width: 66.62%; }
+  .ba-col-sm-7 {
+    width: 58.3%; }
+  .ba-col-sm-6 {
+    width: 50%; }
+  .ba-col-sm-5 {
+    width: 41.65%; }
+  .ba-col-sm-4 {
+    width: 33.3%; }
+  .ba-col-sm-3 {
+    width: 24.98%; }
+  .ba-col-sm-2 {
+    width: 16.66%; }
+  .ba-col-sm-1 {
+    width: 8.33%; } }
+
+@media screen and (min-width: 991px) {
+  .ba-col-md-12 {
+    width: 100%; }
+  .ba-col-md-11 {
+    width: 96.66%; }
+  .ba-col-md-10 {
+    width: 83.3%; }
+  .ba-col-md-9 {
+    width: 74.97%; }
+  .ba-col-md-8 {
+    width: 66.62%; }
+  .ba-col-md-7 {
+    width: 58.3%; }
+  .ba-col-md-6 {
+    width: 50%; }
+  .ba-col-md-5 {
+    width: 41.65%; }
+  .ba-col-md-4 {
+    width: 33.3%; }
+  .ba-col-md-3 {
+    width: 24.98%; }
+  .ba-col-md-2 {
+    width: 16.66%; }
+  .ba-col-md-1 {
+    width: 8.33%; }
+  .hidden-md {
+    display: none !important; } }
+
+@media screen and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important; } }
+
 .ba-header-top .container {
   display: flex;
   justify-content: space-between;
   color: #fff; }
 
 .ba-header-top {
-  background-color: #000; }
+  background-color: #4e4e4e;
+  height: 2em;
+  display: flex;
+  align-items: center; }
   .ba-header-top-contacts {
     color: #fff; }
     .ba-header-top-contacts a {
@@ -88,6 +149,7 @@
 
 .ba-header-main .container {
   display: flex;
+  justify-content: space-between;
   align-items: center; }
 
 .ba-menu {
@@ -126,14 +188,16 @@
 
 .ba-brands .container {
   display: flex;
+  align-items: center;
   justify-content: space-between; }
 
 .ba-footer {
-  background-color: #000; }
+  background-color: #4e4e4e; }
   .ba-footer .container {
     color: #fff;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
 
 .cart {
   display: none;
@@ -239,6 +303,26 @@
       justify-content: center; }
     .cart .goods-count-total {
       width: 32px; }
+
+.cart-menu-favorites {
+  position: relative; }
+
+.cart-menu-cart {
+  position: relative; }
+
+.cart-menu-counter {
+  position: absolute;
+  right: -10px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0 8px;
+  background-color: #fd926d;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px; }
+
+.ba-section6-map {
+  height: 400px; }
 
 .btn {
   text-decoration: none;

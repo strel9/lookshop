@@ -34,7 +34,7 @@
                 </div>
                 <div class="ba-header-top-user">
                     <div class="user__currency">$us<span><i class="fas fa-sort-down"></i></span></div>
-                    <div class="user__account">личный кабинет</div>
+                    <!-- <div class="user__account">личный кабинет</div> -->
                     <div class="user__search"><i class="fas fa-search"></i></div>
                 </div>
             </div>
@@ -62,28 +62,34 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="col-md-3 col-sm-4 col-xs-12  pull-right clearfix">
-                    <a href="#" id="cart">
-                        <div>
-                            <img src="./img/cart.png" alt="cart">
-                        </div>
+                <div class="cart-menu col-md-3 col-sm-4 col-xs-12  pull-right clearfix">
+                    <a class="cart-menu-favorites" href="#" id="favorites">
+                        <img src="img/favorites.png" alt="">
+                        <span class="cart-menu-counter">0</span>
+                    </a>
+                    <a class="cart-menu-cart" href="#" id="cart">
+                        <!-- <div> -->
+                        <img src="img/cart.png" alt="">
+                        <span class="cart-menu-counter">0</span>
+                        <!-- </div> -->
                         <!-- <span class="pull-right">0 items | $ 0</span> -->
                     </a>
                 </div>
+
             </div>
         </div>
         <div class="container">
             <div class="ba-slider1">
                 <div>
-                    <!-- <img src="./img/crazy_summer.png" alt=""> -->
-                    <img src="./img/banner.jpg" alt="">
+                    <img src="./img/banner4.jpg" alt="">
                 </div>
                 <div>
                     <img src="./img/banner.jpg" alt="">
                 </div>
                 <div>
-                    <img src="./img/banner.jpg" alt="">
+                    <img src="./img/banner1.jpg" alt="">
                 </div>
+
             </div>
         </div>
     </header>
@@ -226,7 +232,7 @@
         <div class="cart-body">
             <div class="cart-head">
                 <div class="cart-title">Корзина</div>
-                <div class="cart-total">Общая сумма: <span>0</span> руб</div>
+                <div class="cart-total">Общая сумма: <span>0</span> грн</div>
             </div>
 
             <div class="cart-wrapper">
@@ -236,18 +242,18 @@
 
                 <div class="goods">
                     <div class="goods-img-wrapper">
-                        <img class="goods-img" src="img/temp.png" alt="">
+                        <!-- <img class="goods-img" src="img/temp.png" alt=""> -->
 
                     </div>
                     <div class="goods-description">
                         <h2 class="goods-title">Название товара</h2>
-                        <p class="goods-price">100000 ₽</p>
+                        <p class="goods-price">100000 грн</p>
 
                     </div>
                     <div class="goods-price-count">
                         <div class="goods-trigger">
-                            <button class="goods-add-wishlist"></button>
-                            <button class="goods-delete"></button>
+                            <button class="goods-add-wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            <button class="goods-delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </div>
                         <div class="goods-count">1</div>
                     </div>
