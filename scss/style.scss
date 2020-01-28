@@ -363,7 +363,7 @@
 
 .ba-footer {
 	background-color: $secondaryColor;
-
+	display: none;
 	& .container {
 		color: #fff;
 		display: flex;

@@ -239,7 +239,7 @@ $btnBorderColor: $primaryColor;
 
 
 // меньше чем 576px
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
     .hidden-sm {
         display: none !important;
     }
