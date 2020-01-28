@@ -21,9 +21,6 @@
 <body>
 
     <header class="ba-header">
-        <!--  -->
-        <!-- <div id="snow-animation-container"></div> -->
-        <!--  -->
         <div class="ba-header-top">
             <div class="container">
                 <div class="ba-header-top-contacts ">
@@ -101,142 +98,58 @@
     </header>
 
     <main>
-        <section>
-            <div class="ba-slider1 hidden-sm ba-row">
-                <div>
-                    <img src="./img/banner4.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./img/banner.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./img/banner1.jpg" alt="">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="">
-
-            <div class="ba-baners">
-                <div class="container">
-                    <div class="ba-row">
-                        <div class="ba-col-6">
-                            <img src="./img/best_outfits.jpg" alt="">
-                        </div>
-                        <div class="ba-col-6">
-                            <div class="ba-row">
-                                <img src="./img/party_collection.jpg" alt="">
-                            </div>
-                            <div class="ba-row">
-                                <div class="ba-col-6">
-                                    <img src="./img/best_sellers.jpg" alt="">
-                                </div>
-                                <div class="ba-col-6">
-                                    <img src="./img/fall_leather.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
 
         <section class="">
             <div class="container">
-                <div class="ba-row goods-wrapper">
-                    <div class="card ba-col-12 ba-col-sm-6">
-                        <div class="card-img-wrapper">
-                            <img class="" src="./img/girl_2.jpg" alt="${title}">
-                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
-                                data-goods-id="${id}">
-                                <i class="fas fa-heart card-add-wishlist-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body-brand">Адидас</p>
-                            <a class="card-body-title" href="#">Платье</a>
-                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
-                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
-                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
-                            </button>
-                        </div>
+                <nav class="breadcrumbs navbar-expand-lg ">
+                        <ul class="breadcrumbs-nav">
+                            <!-- <li class="breadcrumbs-nav-item">
+                                <a class="breadcrumbs-brand" href="#"><i class="fas fa-home"></i>
+                            </li> -->
+                            <li class="breadcrumbs-nav-item">
+                                <a href="#"> Женщинам</a>
+                            </li>
+                            <li class="breadcrumbs-nav-item">
+                                <a href="#">&gt; Одежда</a>
+                            </li>
+                            <li class="breadcrumbs-nav-item">
+                                <a href="#">&gt; Платья </a>
+                            </li>
+                        </ul>
+                </nav>
+                <div class="goods-woman-wrapper">
+
+                    <aside class="category">
+                        <!-- <div class="breadcrumbs">
+                            <a href="#">Главная</a>
+                            <span>></span>
+                            <a href="#">Женщинам</a>
+                        </div> -->
+                        <h5 class="category__title">Категории</h5>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" class="category-item category-item__dresses"
+                                    data-category="dresses">Платья</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item category-item__skirts" data-category="skirts">Юбки</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item category-item__electron" data-category="tops">Топы</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item category-item__tops"
+                                    data-category="svitera">Свитера</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item category-item__sport" data-category="sport">Спорт</a>
+                            </li>
+                        </ul>
+                        <h5 class="category__title">Бренды</h5>
+
+                    </aside>
+                    <div class="ba-row goods-wrapper">
                     </div>
-                    <!--  -->
-                    <div class="card ba-col-12">
-                        <div class="card-img-wrapper">
-                            <img class="" src="./img/girl_5.jpg" alt="${title}">
-                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
-                                data-goods-id="${id}">
-                                <i class="fas fa-heart card-add-wishlist-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body-brand">Адидас</p>
-                            <a class="card-body-title" href="#">Платье</a>
-                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
-                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
-                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="card ba-col-12 ba-col-sm-6">
-                        <div class="card-img-wrapper">
-                            <img class="" src="./img/girl_8.jpg" alt="${title}">
-                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
-                                data-goods-id="${id}">
-                                <i class="fas fa-heart card-add-wishlist-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body-brand">Адидас</p>
-                            <a class="card-body-title" href="#">Платье</a>
-                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
-                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
-                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="card ba-col-12 ba-col-sm-6">
-                        <div class="card-img-wrapper">
-                            <img class="" src="./img/girl_10.jpg" alt="${title}">
-                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
-                                data-goods-id="${id}">
-                                <i class="fas fa-heart card-add-wishlist-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body-brand">Адидас</p>
-                            <a class="card-body-title" href="#">Платье</a>
-                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
-                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
-                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="card ba-col-12 ba-col-sm-6">
-                        <div class="card-img-wrapper">
-                            <img class="" src="./img/girl_11.jpg" alt="${title}">
-                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
-                                data-goods-id="${id}">
-                                <i class="fas fa-heart card-add-wishlist-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body-brand">Адидас</p>
-                            <a class="card-body-title" href="#">Платье</a>
-                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
-                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
-                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!--  -->
                 </div>
             </div>
         </section>
@@ -311,8 +224,7 @@
             <span>© Lookshop.com, 2020 All Rights Reserved</span>
             <div>Покупателю</div>
             <div>О компании</div>
-            <div>
-                <a href="./contact.html">Контакты</a>
+            <div>Контакты
                 <div class="ba-social">
                     <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -365,9 +277,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- tweenmax для снега -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <!--  -->
+
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/1c19972f1c.js" crossorigin="anonymous"></script>
 
