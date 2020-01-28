@@ -63,7 +63,7 @@
 
 	&-main {
 		&-logo img {
-			width: 40%;
+			width: 100%;
 		}
 
 		&-nav {
@@ -159,7 +159,7 @@
 .shopping {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-end;
 	// width: 100%;
 
 	&-favorites {
