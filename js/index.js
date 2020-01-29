@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $('.ba-slider1').slick({
-    dots: false,
+    dots: true,
     arrows: false
 });
 //
