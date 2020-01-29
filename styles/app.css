@@ -7,6 +7,10 @@
   margin: 0 auto;
   padding: 0 15px; }
 
+.look-row {
+  display: flex;
+  flex-wrap: wrap; }
+
 /* Ba-grid  */
 .ba-row {
   display: flex;
@@ -227,16 +231,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end; }
+  .shopping img {
+    width: 90%; }
   .shopping-favorites {
     position: relative; }
-    .shopping-favorites :hover {
-      transition: .7s;
-      transform: scale(1.2); }
   .shopping-cart {
     position: relative; }
-    .shopping-cart :hover {
-      transition: .7s;
-      transform: scale(1.2); }
   .shopping-counter {
     position: absolute;
     right: -10px;
@@ -309,6 +309,7 @@
     .card-add-wishlist-heart:hover {
       color: #fd926d; }
   .card-body {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,10 +324,9 @@
     .card-body-price {
       color: #4e4e4e; }
   .card-add-cart {
-    display: none;
     justify-content: center;
     align-items: center;
-    opacity: 0; }
+    opacity: 1; }
   .card:hover {
     transform: scale(1.03);
     transition: .7s;
@@ -345,7 +345,12 @@
   color: #fd926d; }
 
 .ba-baners {
-  display: none; }
+  overflow: hidden; }
+  .ba-baners-row {
+    padding: 0;
+    margin: 0; }
+  .ba-baners img {
+    width: 100%; }
 
 .ba-brands .container {
   display: flex;
@@ -353,8 +358,7 @@
   justify-content: space-between; }
 
 .ba-footer {
-  background-color: #4e4e4e;
-  display: none; }
+  background-color: #4e4e4e; }
   .ba-footer .container {
     color: #fff;
     display: flex;
