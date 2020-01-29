@@ -280,7 +280,11 @@
   border-bottom: solid 1px #4e4e4e; }
   .breadcrumbs-nav {
     display: flex;
-    list-style: none; }
+    list-style: none;
+    margin: 0.1rem; }
+    @media screen and (min-width: 768px) {
+      .breadcrumbs-nav {
+        margin: 1rem; } }
     .breadcrumbs-nav-item a {
       text-decoration: none;
       color: #4e4e4e; }
@@ -292,19 +296,40 @@
     color: #4e4e4e; }
 
 .subscribe {
+  display: flex;
   background-color: #ededed;
   color: #6c6c6c; }
+  .subscribe-mail {
+    display: flex;
+    justify-content: center; }
+    .subscribe-mail__input {
+      width: 100%; }
+    .subscribe-mail span {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        .subscribe-mail span {
+          display: flex;
+          align-items: center; } }
+  .subscribe .ba-social {
+    display: flex;
+    justify-content: flex-end; }
+    .subscribe .ba-social-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .subscribe .ba-social__items {
+      color: #6c6c6c;
+      padding: 1rem; }
+      .subscribe .ba-social__items:hover {
+        background-color: #fd926d; }
 
 .subscribe .container {
   display: flex;
-  justify-content: space-between; }
-
-.ba-social {
-  display: flex;
   justify-content: space-between;
-  align-items: center; }
-  .ba-social__items {
-    color: #6c6c6c; }
+  flex-wrap: wrap; }
+  @media screen and (min-width: 768px) {
+    .subscribe .container {
+      flex-wrap: nowrap; } }
 
 .goods-woman-wrapper {
   display: flex; }
@@ -331,7 +356,8 @@
     right: 0;
     background: transparent;
     border: 0;
-    opacity: 0; }
+    opacity: 0;
+    top: 10px; }
     .card-add-wishlist-heart:hover {
       color: #fd926d; }
   .card-body {
@@ -371,7 +397,11 @@
   color: #fd926d; }
 
 .ba-baners {
+  display: none;
   overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .ba-baners {
+      display: block; } }
   .ba-baners-row {
     padding: 0;
     margin: 0; }

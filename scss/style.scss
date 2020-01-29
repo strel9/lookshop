@@ -308,6 +308,7 @@
 	}
 }
 
+.ba-slider2 {}
 
 
 .breadcrumbs {
@@ -318,6 +319,13 @@
 	&-nav {
 		display: flex;
 		list-style: none;
+
+		margin: 0.1rem;
+
+		@media screen and (min-width:768px) {
+			margin: 1rem;
+
+		}
 
 		&-item a {
 			text-decoration: none;
@@ -338,27 +346,63 @@
 }
 
 .subscribe {
+	display: flex;
 	background-color: #ededed;
 	color: #6c6c6c;
+
+	&-mail {
+		display: flex;
+		justify-content: center;
+
+		&__input {
+			width: 100%;
+		}
+
+		& span {
+			display: none;
+
+			@media screen and (min-width: 768px) {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	.ba-social {
+		display: flex;
+		justify-content: flex-end;
+
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+
+		&__items {
+			color: #6c6c6c;
+			padding: 1rem;
+
+			&:hover {
+				background-color: $primaryColor;
+			}
+		}
+	}
 
 }
 
 .subscribe .container {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 
-
-}
-
-.ba-social {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	&__items {
-		color: #6c6c6c;
+	@media screen and (min-width: 768px) {
+		flex-wrap: nowrap;
 	}
+
 }
+
+
 
 // меню на второй странице
 .goods-woman-wrapper {
@@ -400,6 +444,7 @@
 		background: transparent;
 		border: 0;
 		opacity: 0;
+		top: 10px;
 
 		// &-heart {}
 
@@ -469,7 +514,12 @@
 
 .ba-baners {
 	// padding: 0 15px;
+	display: none;
 	overflow: hidden;
+
+	@media screen and (min-width:768px) {
+		display: block;
+	}
 
 	&-row {
 		padding: 0;
@@ -480,18 +530,7 @@
 		width: 100%;
 	}
 
-	&-left {
-		// padding: 0;
-		// width: 50%;
-	}
 
-	&-right {
-		// padding: 0;
-		// width: 50%;
-		// padding-left: 15px;
-	}
-
-	// display: none;
 }
 
 

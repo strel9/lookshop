@@ -284,9 +284,20 @@ $('.ba-slider1').slick({
 //
 $('.ba-slider2').slick({
     infinite: true,
+    arrows: false,
     dots: false,
-    slidesToShow: 6,
-    slidesToScroll: 1
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    // 
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            centerMode: false
+        }
+    }]
 });
 //
 //Mobile menu
