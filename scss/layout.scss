@@ -180,9 +180,9 @@ $btnBorderColor: $primaryColor;
         width: 8.33%;
     }
 
-    .hidden-md {
-        display: none !important;
-    }
+    // .hidden-md {
+    //     display: none !important;
+    // }
 }
 
 // больше чем 992px
@@ -235,22 +235,22 @@ $btnBorderColor: $primaryColor;
         width: 8.33%;
     }
 
-    .hidden-lg {
-        display: none !important;
-    }
+    // .hidden-lg {
+    //     display: none !important;
+    // }
 }
 
 
-// меньше чем 576px
-@media screen and (max-width: 575px) {
-    .hidden-sm {
-        display: none !important;
-    }
-}
+// // меньше чем 576px
+// @media screen and (max-width: 575px) {
+//     .hidden-sm {
+//         display: none !important;
+//     }
+// }
 
-// меньше чем 768px
-@media screen and (max-width: 768px) {
-    .hidden-md {
-        display: none !important;
-    }
-}
+// // меньше чем 768px
+// @media screen and (max-width: 768px) {
+//     .hidden-md {
+//         display: none !important;
+//     }
+// }

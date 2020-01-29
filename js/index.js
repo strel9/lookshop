@@ -278,7 +278,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $('.ba-slider1').slick({
-    dots: true,
-    // arrows: true
+    dots: false,
+    arrows: false
 });
 //
+$('.ba-slider2').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 6,
+    slidesToScroll: 1
+});
+//
+//Mobile menu
+var mobileMenu = document.querySelector('.mobile-menu-btn');
+var menuList = document.querySelector('.ba-menu');
+
+mobileMenu.addEventListener('click', function (event) {
+    event.preventDefault();
+    menuList.classList.toggle('ba-menu--active');
+});
