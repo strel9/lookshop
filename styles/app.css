@@ -291,11 +291,18 @@
       text-decoration: none;
       color: #232323; }
 
-.category-list {
-  list-style: none; }
-  .category-list a {
-    text-decoration: none;
-    color: #232323; }
+.category {
+  padding-right: 0.8rem; }
+  .category-list {
+    list-style: none; }
+  .category-item {
+    margin: 0.4rem; }
+    .category-item__link {
+      text-decoration: none;
+      color: #232323;
+      font-weight: 500; }
+      .category-item__link:hover {
+        opacity: 0.8; }
 
 .subscribe {
   display: flex;
@@ -307,11 +314,16 @@
     .subscribe-mail__input {
       width: 100%; }
     .subscribe-mail span {
-      display: none; }
+      display: none;
+      padding-right: 1rem; }
       @media screen and (min-width: 768px) {
         .subscribe-mail span {
           display: flex;
           align-items: center; } }
+    .subscribe-mail button {
+      color: #6c6c6c;
+      background-color: #6c6c6c;
+      padding: .9rem; }
   .subscribe .ba-social {
     display: flex;
     align-items: center;
@@ -386,6 +398,8 @@
     justify-content: center;
     align-items: center;
     opacity: 1; }
+    .card-add-cart span {
+      padding-left: .2rem; }
   .card:hover {
     transform: scale(1.03);
     transition: .7s;
@@ -594,6 +608,17 @@
   -webkit-transition-duration: .3s, .3s;
   -o-transition-duration: .3s, .3s;
   transition-duration: .3s, .3s; }
+
+.btn {
+  text-decoration: none;
+  background-color: #232323;
+  color: #fff;
+  min-width: 100px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 1px; }
+  .btn:hover {
+    background-color: gray; }
 
 .loader-four {
   position: relative;

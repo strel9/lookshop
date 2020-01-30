@@ -10,7 +10,7 @@ $secondaryColor: #232323;
 
 // $threeColor: #232323;
 
-$btnBorderColor: $primaryColor;
+// $btnBorderColor: $primaryColor;
 
 
 * {
@@ -53,10 +53,10 @@ $btnBorderColor: $primaryColor;
 
 
 // mixins
-// @mixin buttonHover {
-//     background-color: pink;
-//     border-color: darken($btnBorderColor, 15%)
-// }
+@mixin buttonHover {
+    background-color: gray;
+    // border-color: darken($btnBorderColor, 15%)
+}
 
 
 

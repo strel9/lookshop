@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const target = event.target;
 
-        if (target.classList.contains('category-item')) {
+        if (target.classList.contains('category-item__link')) {
             // console.log(target.dataset.category);
 
             const category = target.dataset.category;

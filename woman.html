@@ -147,42 +147,45 @@
                         </div> -->
                         <h5 class="category__title">Категории</h5>
                         <ul class="category-list">
-                            <li>
-                                <a href="#" class="category-item category-item__dresses"
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__dresses"
                                     data-category="dresses">Платья</a>
                             </li>
-                            <li>
-                                <a href="#" class="category-item category-item__skirts" data-category="skirts">Юбки</a>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__skirts"
+                                    data-category="skirts">Юбки</a>
                             </li>
-                            <li>
-                                <a href="#" class="category-item category-item__electron" data-category="tops">Топы</a>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__electron"
+                                    data-category="tops">Топы</a>
                             </li>
-                            <li>
-                                <a href="#" class="category-item category-item__tops"
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__tops"
                                     data-category="svitera">Свитера</a>
                             </li>
-                            <li>
-                                <a href="#" class="category-item category-item__sport" data-category="sport">Спорт</a>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__sport"
+                                    data-category="sport">Спорт</a>
                             </li>
                         </ul>
-                        <h5 class="category__title">Бренды</h5>
+                        <!-- <h5 class="category__title">Бренды</h5>
                         <ul class="category-list">
                             <li>
-                                <a href="#" class="category-item category-item__" data-category="dresses">Balmain</a>
+                                <a href="#" class="category-item__link category-item__" data-category="dresses">Balmain</a>
                             </li>
                             <li>
-                                <a href="#" class="category-item category-item__" data-category="skirts">Balenciaga</a>
+                                <a href="#" class="category-item__link category-item__" data-category="skirts">Balenciaga</a>
                             </li>
                             <li>
-                                <a href="#" class="category-item category-item__" data-category="tops">MaxMara</a>
+                                <a href="#" class="category-item__link category-item__" data-category="tops">MaxMara</a>
                             </li>
                             <li>
-                                <a href="#" class="category-item category-item__" data-category="svitera">Prada</a>
+                                <a href="#" class="category-item__link category-item__" data-category="svitera">Prada</a>
                             </li>
                             <li>
-                                <a href="#" class="category-item category-item__" data-category="sport">Valentino</a>
+                                <a href="#" class="category-item__link category-item__" data-category="sport">Valentino</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </aside>
                     <div class="ba-row goods-wrapper">
                     </div>
@@ -190,22 +193,28 @@
             </div>
         </section>
 
-        <section>
-            <div class="subscribe">
-                <div class="container">
-                    <div class="subscribe-mail"><span>Подписаться</span>
-                        <input type="text" placeholder="Ваш email">
-                        <button class="btn"><i class="fas fa-plus"></i></button>
-                    </div>
+        <section class="subscribe">
+            <div class="container">
+                <div class="subscribe-mail ba-col-12 ba-col-md-6">
+                    <span>Подписаться</span>
+                    <input class="subscribe-mail__input" type="text" placeholder="Ваш email">
+                    <button class="subscribe-mail__btn btn_gray-brdr"><i class="fas fa-plus"></i></button>
+                </div>
 
-                    <div class="ba-social">
-                        <span>Мы здесь</span>
-                        <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <div class="ba-social ba-col-12 ba-col-md-4">
+                    <span class="ba-col-4">Мы здесь</span>
+
+                    <div class="ba-social-wrapper">
+                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <section class="ba-brands">

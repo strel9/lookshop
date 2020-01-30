@@ -347,12 +347,23 @@
 }
 
 .category {
+	padding-right: 0.8rem;
+
 	&-list {
 		list-style: none;
+	}
 
-		a {
+	&-item {
+		margin: 0.4rem;
+
+		&__link {
 			text-decoration: none;
 			color: $secondaryColor;
+			font-weight: 500;
+
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 }
@@ -373,11 +384,19 @@
 
 		& span {
 			display: none;
+			padding-right: 1rem;
 
 			@media screen and (min-width: 768px) {
 				display: flex;
 				align-items: center;
 			}
+		}
+
+		button {
+			color: #6c6c6c;
+			background-color: #6c6c6c;
+			padding: .9rem;
+
 		}
 	}
 
@@ -502,6 +521,10 @@
 		justify-content: center;
 		align-items: center;
 		opacity: 1;
+
+		& span {
+			padding-left: .2rem;
+		}
 	}
 
 	&:hover {
@@ -802,6 +825,7 @@
 	background: -o-linear-gradient(bottom, #232323 52%, #fff 48%) left top/100% 200% no-repeat;
 	background: linear-gradient(to top, #232323 52%, #fff 48%) left top/100% 200% no-repeat;
 }
+
 .btn_gray-brdr {
 	color: #232323;
 	border: 1px solid #ededed;
@@ -835,17 +859,19 @@
 	-o-transition-duration: .3s, .3s;
 	transition-duration: .3s, .3s;
 }
-.btn {
-	// text-decoration: none;
-	// background: #ededed;
-	// // color: #fff;
-	// // min-width: 100px;
-	// padding: 0 1em;
-	// border: none;
 
-	// &:hover {
-	// 	@include buttonHover;
-	// }
+.btn {
+	text-decoration: none;
+	background-color: $secondaryColor;
+	color: #fff;
+	min-width: 100px;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 1px;
+
+	&:hover {
+		@include buttonHover;
+	}
 }
 
 // 
