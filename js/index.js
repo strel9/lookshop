@@ -14,10 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const breadActiv = document.getElementById('breadcrumbs-place');
 
 
+    // const loader = () => {
+    //     goodsWrapper.innerHTML = `<div class="loader-four" id="loader-four">
+    //     <div class="loader-four__preloader"></div></div>`
+    // };
+
     const loader = () => {
-        goodsWrapper.innerHTML = `<div class="loader-four" id="loader-four">
-        <div class="loader-four__preloader"></div></div>`
+        goodsWrapper.innerHTML = `<div class="loader-five">
+        <div class="loader-five__dot">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="loader-five__dot">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="loader-five__dot">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>`
     };
+
 
     let wishlist = [];
     let goodsBasket = [];
@@ -300,7 +321,7 @@ $('.ba-slider1').slick({
 $('.ba-slider2').slick({
     infinite: true,
     arrows: false,
-    dots: false,
+    dots: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     // 
@@ -309,7 +330,7 @@ $('.ba-slider2').slick({
         breakpoint: 768,
         settings: {
             slidesToShow: 5,
-            slidesToScroll: 1,
+            slidesToScroll: 3,
             centerMode: false
         }
     }]
