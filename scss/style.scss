@@ -157,28 +157,48 @@
 
 				}
 
-				&__link::after {}
+
 
 				&__link {
 					padding: 5px;
-					position: relative;
 					font-weight: 900;
 					color: $secondaryColor;
 					text-decoration: none;
-					position: relative;
 
 					@media screen and (min-width: 768px) {
 						padding: 10px 15px;
 
 					}
 
+					position: relative;
+					opacity: .7;
+					transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+
+
+					&::after {
+						--scale: 0;
+
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 100%;
+						height: 3px;
+						background: linear-gradient(135deg, rgb(115, 250, 200), rgb(0, 190, 225));
+						transform: scaleX(var(--scale));
+						transform-origin: var(--x) 50%;
+						transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+					}
 
 					&:hover {
+						opacity: 1;
 						// background-color: $primaryColor;
-
 						// border-bottom: solid 2px $primaryColor;
 					}
 
+					&:hover::after {
+						--scale: 1;
+					}
 
 
 					// &:after {
@@ -267,6 +287,11 @@
 	}
 }
 
+.ba-slider1 .slick-dots {
+	bottom: 2rem;
+	// height: ;
+}
+
 .ba-slider2 {
 	// overflow: visible;
 }
@@ -325,6 +350,7 @@
 	display: flex;
 	background-color: #ededed;
 	color: #6c6c6c;
+	// margin-top: 4rem;
 
 	&-mail {
 		display: flex;
@@ -496,6 +522,15 @@
 
 
 .ba-baners {
+	// padding: 0 15px;
+	margin-top: 4rem;
+	display: none;
+	overflow: hidden;
+
+	@media screen and (min-width:768px) {
+		display: block;
+	}
+
 	&__item {
 		// background: linear-gradient(to bottom, #f38181, #fce38a);
 
@@ -504,13 +539,7 @@
 		}
 	}
 
-	// padding: 0 15px;
-	display: none;
-	overflow: hidden;
 
-	@media screen and (min-width:768px) {
-		display: block;
-	}
 
 	&-row {
 		padding: 0;
@@ -526,8 +555,12 @@
 
 
 .ba-brands {
+	margin-top: 4rem;
 	border-top: 1px solid $secondaryColor;
 	border-bottom: 1px solid $secondaryColor;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 
 	.container {
 
