@@ -113,7 +113,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="ba-hero">
             <!-- <div class="container"> -->
             <div class="ba-slider1">
 
@@ -135,19 +135,19 @@
 
             <div class="ba-baners">
                 <!-- <div class="container"> -->
-                <div class="look-row">
-                    <a href="#" class="ba-col-6 ba-baners-row ba-baners-left">
+                <div class="look-row ba-baners__item">
+                    <a href="#" class="ba-baners__item ba-col-6 ba-baners-row ba-baners-left">
                         <img src="./img/best_outfits.jpg" alt="">
                     </a>
-                    <div class="ba-col-6 ba-baners-row">
+                    <div class="ba-baners__item ba-col-6 ba-baners-row">
                         <a href="#" class="look-row">
                             <img src="./img/party_collection.jpg" alt="">
                         </a>
                         <div class="look-row">
-                            <a href="#" class=" ba-col-6">
+                            <a href="#" class="ba-baners__item ba-col-6">
                                 <img src="./img/best_sellers.jpg" alt="">
                             </a>
-                            <a href="#" class=" ba-col-6">
+                            <a href="#" class="ba-baners__item ba-col-6">
                                 <img src="./img/fall_leather.jpg" alt="">
                             </a>
                         </div>
@@ -166,16 +166,19 @@
                     <div class="subscribe-mail ba-col-12 ba-col-md-6">
                         <span>Подписаться</span>
                         <input class="subscribe-mail__input" type="text" placeholder="Ваш email">
-                        <button class="btn_white-brdr"><i class="fas fa-plus"></i></button>
+                        <button class="btn btn_white-brdr"><i class="fas fa-plus"></i></button>
                     </div>
 
                     <div class="ba-social ba-col-12 ba-col-md-4">
+                        <span class="ba-col-4">Мы здесь</span>
+
                         <div class="ba-social-wrapper">
-                            <span>Мы здесь</span>
-                            <a href="#" class="ba-social__items"><i class="fab fa-facebook-f"
+                            <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-facebook-f"
                                     aria-hidden="true"></i></a>
-                            <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-twitter"
+                                    aria-hidden="true"></i></a>
+                            <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -192,6 +195,42 @@
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./img/girl_2.jpg" alt="${title}">
+                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
+                                data-goods-id="${id}">
+                                <i class="fas fa-heart card-add-wishlist-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-body-brand">Адидас</p>
+                            <a class="card-body-title" href="#">Платье</a>
+                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
+                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
+                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="card ba-col-12 ba-col-sm-6">
+                        <div class="card-img-wrapper">
+                            <img class="" src="./img/girl_5.jpg" alt="${title}">
+                            <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
+                                data-goods-id="${id}">
+                                <i class="fas fa-heart card-add-wishlist-heart"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-body-brand">Адидас</p>
+                            <a class="card-body-title" href="#">Платье</a>
+                            <p class="card-body-price">300<i class="fas fa-hryvnia"></i></p>
+                            <button class="card-add-cart btn" role="button" data-goods-id="${id}">
+                                Добавить в корзину<span><i class="fas fa-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="card ba-col-12 ba-col-sm-6">
+                        <div class="card-img-wrapper">
+                            <img class="" src="./img/girl_5.jpg" alt="${title}">
                             <button class="card-add-wishlist ${wishlist.includes(id) ? 'active' : ''}"
                                 data-goods-id="${id}">
                                 <i class="fas fa-heart card-add-wishlist-heart"></i>
@@ -337,7 +376,7 @@
             </div>
         </section>
 
-        <section class="ba-brands hidden-sm">
+        <section class="ba-brands">
             <div class="container">
                 <a href="#">
                     <img src="./img/brand_1.png" alt="" class="brands-items">
@@ -371,16 +410,11 @@
 
         <section class="ba-about">
             <div class="container">
-                <h2>About LookShop</h2>
-                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-                    sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-                    Duis
-                    sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
-                    tellus a
-                    odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class
-                    aptent
-                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
-                    Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
+                <h2>О компании</h2>
+                <p>Lookshop это 22 роскошных бутика в Харькове, Киеве, Одессе и Днепре. В сети представлены ведущие модные марки
+                    - за долгие годы работы компания приобрела богатейший опыт в работе с уникальными, эксклюзивными
+                    коллекциями. Дистрибуция модной мужской и женской одежды, обуви и аксессуаров является одной из
+                    важных сфер деятельности компании. </p>
             </div>
         </section>
 
@@ -391,9 +425,8 @@
                     <h6>Харьков</h6>
                     <h6>Киев</h6>
 
-
                 </div>
-                <div class="ba-col-9 ba-section6-map scroll-to" id="map">
+                <div class="ba-col-9 map-section-google scroll-to" id="map">
                     <script>
                         function initMap() {
                             let map;
@@ -597,17 +630,22 @@
 
     <footer class="ba-footer">
         <div class="container">
-            <span>© Lookshop.com, 2020 All Rights Reserved</span>
-            <div>Покупателю</div>
-            <div>О компании</div>
-            <div>
-                <a href="./contact.html">Контакты</a>
-                <div class="ba-social">
-                    <a href="#" class="ba-social__items"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href="#" class="ba-social__items"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" class="ba-social__items"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                </div>
-            </div>
+            <span class="ba-footer__items">© Lookshop.com, 2020 All Rights Reserved</span>
+            <a href="#" class="ba-footer__items">Возврат</a>
+            <a href="#" class="ba-footer__items">Доставка</a>
+            <a href="#" class="ba-footer__items">Заказы
+
+                <!-- <div class="ba-social ba-col-12 ba-col-md-4">
+                    <div class="ba-social-wrapper">
+                        <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="ba-social__items ba-col-4 btn_white-brdr"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div> -->
+            </a>
         </div>
     </footer>
 
@@ -661,7 +699,7 @@
 
     <script src='./js/index.js'></script>
 
-    <script src="//code.jivosite.com/widget/CDvr0Rm1YG" async></script>
+    <!-- <script src="//code.jivosite.com/widget/CDvr0Rm1YG" async></script> -->
 
 </body>
 

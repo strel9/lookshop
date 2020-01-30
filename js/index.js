@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const search = document.querySelector('.ba-search-form');
     const cartBtn = document.getElementById('cart');
@@ -9,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const wishlistCounter = wishlistBtn.querySelector('.shopping-counter');
     const cartWrapper = document.querySelector('.cart-wrapper')
     // console.log('wishlistCounter: ', wishlistCounter);
+    const breadActiv = document.getElementById('breadcrumbs-place');
+
 
     const loader = () => {
         goodsWrapper.innerHTML = `<div class="loader-four" id="loader-four">
@@ -142,8 +146,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const category = target.dataset.category;
             getGoods(renderCard, (goods) => goods.filter((item) => item.category.includes(category)));
+            // вот здесь создавать текущую хлеб крошку target.dataset.category
+            breadActiv.innerText = ' ';
+            breadActiv.innerText = target.innerText;
+            // console.log(target.innerText);
         }
     };
+
+
     const searchGoods = (event) => {
         event.preventDefault();
         // console.log(event.target.elements);
@@ -167,6 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log('wishlist.length: ', wishlist.length);
         cartCounter.textContent = goodsBasket.length;
     };
+
+    // $(document).ready(function () {
+    //     checkCount();
+
+    // });
 
     const storageQuery = (get) => {
         if (get) {
@@ -198,19 +213,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const addBasket = (id, elem) => {
-        console.log(id);
-        console.log(goodsBasket);
+        // console.log(id);
+        // console.log(goodsBasket);
 
         goodsBasket.includes(element => {
 
         });
         if (element.cartId === id) {
             // goodsBasket.splice(goodsBasket.indexOf(id), 1);
-            console.log('q');
+            // console.log('q');
         } else {
             // const a = { id, 1};
             goodsBasket.push({ cartId: id }, { quantity: 1 });
-            console.log('a');
+            // console.log('a');
 
         }
 
@@ -301,10 +316,45 @@ $('.ba-slider2').slick({
 });
 //
 //Mobile menu
-var mobileMenu = document.querySelector('.mobile-menu-btn');
-var menuList = document.querySelector('.ba-menu');
+let mobileMenu = document.querySelector('.mobile-menu-btn');
+let menuList = document.querySelector('.ba-menu');
+// console.log(menuList);
 
 mobileMenu.addEventListener('click', function (event) {
     event.preventDefault();
     menuList.classList.toggle('ba-menu--active');
 });
+
+//
+// 
+// 
+// menu 
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 500) {
+        $(".ba-header").css({
+            'position': 'fixed',
+            'z-index': '1'
+        });
+        $(".ba-header-top").css({
+            'display': 'none'
+        });
+        $(".ba-header").css({
+            'width': '100%'
+        });
+
+    }
+    else {
+        $(".ba-header").css({
+            'position': 'static',
+            'z-index': '1'
+        });
+        $(".ba-header-top").css({
+            'display': 'flex'
+        });
+        $(".ba-header-main").css({
+            'width': '100%'
+        });
+
+    };
+});
+
