@@ -330,7 +330,7 @@
   .subscribe .ba-social {
     display: flex;
     align-items: center;
-    justify-content: flex-end; }
+    justify-content: space-around; }
     .subscribe .ba-social-wrapper {
       display: flex;
       justify-content: space-between;
@@ -535,8 +535,9 @@
     .cart .goods-description {
       padding: 10px;
       flex-grow: 1; }
-    .cart .goods-title {
-      font-size: 16px; }
+    .cart .goods-title h5 {
+      font-size: 2rem;
+      font-weight: 900; }
     .cart .goods-price-count {
       padding-right: 10px; }
     .cart .goods-trigger {

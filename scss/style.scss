@@ -404,8 +404,10 @@
 	.ba-social {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: space-around;
+		// &__descr{
 
+		// }
 		&-wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -742,7 +744,10 @@
 		}
 
 		&-title {
-			font-size: 16px;
+			h5 {
+				font-size: 2rem;
+				font-weight: 900;
+			}
 		}
 
 		&-price-count {
