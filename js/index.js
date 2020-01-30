@@ -359,23 +359,23 @@ $(window).scroll(function () {
 });
 
 // меню эффект
-document.querySelectorAll('.ba-menu__link').forEach((elem) => {
+// document.querySelectorAll('.ba-menu__link').forEach((elem) => {
 
-    elem.onmouseenter =
-        elem.onmouseleave = (e) => {
+//     elem.onmouseenter =
+//         elem.onmouseleave = (e) => {
 
-            const tolerance = 10
+//             const tolerance = 10
 
-            const left = 0
-            const right = elem.clientWidth
+//             const left = 0
+//             const right = elem.clientWidth
 
-            let x = e.pageX - elem.offsetLeft
+//             let x = e.pageX - elem.offsetLeft
 
-            if (x - tolerance < left) x = left
-            if (x + tolerance > right) x = right
+//             if (x - tolerance < left) x = left
+//             if (x + tolerance > right) x = right
 
-            elem.style.setProperty('--x', `${x}px`)
+//             elem.style.setProperty('--x', `${x}px`)
 
-        }
+//         }
 
-})
+// })
