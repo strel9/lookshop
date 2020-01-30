@@ -24,11 +24,11 @@
 
 			&__phone {}
 
-			&__link {
-				padding-left: 10px;
-				color: inherit;
-				text-decoration: none;
-			}
+			// &__link {
+			// 	padding-left: 10px;
+			// 	color: inherit;
+			// 	text-decoration: none;
+			// }
 
 		}
 
@@ -141,7 +141,7 @@
 					justify-content: flex-start;
 
 					@media screen and (min-width: 768px) {
-						padding: 10px 15px;
+						padding: 1rem 1rem;
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
@@ -154,24 +154,21 @@
 						// padding-left: 60px;
 					}
 
-
 				}
 
-
-
 				&__link {
-					padding: 5px;
+					padding: 0.5rem;
 					font-weight: 900;
 					color: $secondaryColor;
 					text-decoration: none;
 
 					@media screen and (min-width: 768px) {
-						padding: 10px 15px;
+						padding: 1rem 1rem;
 
 					}
 
 					position: relative;
-					opacity: .7;
+					// opacity: .7;
 					transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
 
 
@@ -232,7 +229,7 @@
 		.shopping {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: flex-end;
+			justify-content: center;
 			align-items: center;
 
 			// width: 100%;
@@ -260,14 +257,19 @@
 			}
 
 			&-counter {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				position: absolute;
-				right: -10px;
-				height: 16px;
+				right: -6px;
+				height: 14px;
+				width: 10px;
+				top: 0;
 				border-radius: 8px;
 				padding: 0 8px;
 				background-color: $primaryColor;
 				color: #fff;
-				font-size: 12px;
+				font-size: 0.8rem;
 				line-height: 16px;
 			}
 		}
@@ -421,7 +423,7 @@
 	display: flex;
 	justify-content: space-between;
 	// background: #fd926d;
-	margin: 25px auto 0;
+	margin: 2rem auto 0;
 	padding-bottom: 10px;
 
 	// width: 100%
@@ -555,24 +557,27 @@
 
 
 .ba-brands {
-	margin-top: 4rem;
-	border-top: 1px solid $secondaryColor;
-	border-bottom: 1px solid $secondaryColor;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 
-	.container {
+	display: none;
 
-		display: none;
+	// .container {
+	@media screen and (min-width:768px) {
 
-		@media screen and (min-width:768px) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-
+		margin-top: 0;
+		border-top: 1px solid $secondaryColor;
+		border-bottom: 1px solid $secondaryColor;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		// max-height: 9rem;
 	}
+
+	&-items:hover {
+		transform: scale(1.1);
+	}
+
+	// }
 }
 
 .ba-about {}

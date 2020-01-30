@@ -162,16 +162,12 @@
     color: #fff; }
   .ba-header-top {
     width: 100%;
-    background-color: #4e4e4e;
+    background-color: #000;
     height: 2em;
     display: flex;
     align-items: center; }
     .ba-header-top-contacts {
       color: #fff; }
-      .ba-header-top-contacts__link {
-        padding-left: 10px;
-        color: inherit;
-        text-decoration: none; }
     .ba-header-top-user {
       color: black;
       display: flex;
@@ -192,7 +188,7 @@
       .ba-header-main-wrapper {
         flex-wrap: nowrap; } }
   .ba-header-main .mobile-menu-btn {
-    color: #4e4e4e; }
+    color: #000; }
     @media screen and (min-width: 768px) {
       .ba-header-main .mobile-menu-btn {
         display: none; } }
@@ -231,21 +227,20 @@
         justify-content: flex-start; }
         @media screen and (min-width: 768px) {
           .ba-header-main-nav .ba-menu-item {
-            padding: 10px 15px;
+            padding: 1rem 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center; } }
       .ba-header-main-nav .ba-menu__link {
-        padding: 5px;
+        padding: 0.5rem;
         font-weight: 900;
-        color: #4e4e4e;
+        color: #000;
         text-decoration: none;
         position: relative;
-        opacity: .7;
         transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1); }
         @media screen and (min-width: 768px) {
           .ba-header-main-nav .ba-menu__link {
-            padding: 10px 15px; } }
+            padding: 1rem 1rem; } }
         .ba-header-main-nav .ba-menu__link::after {
           --scale: 0;
           content: '';
@@ -265,7 +260,7 @@
   .ba-header-main .shopping {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center; }
     .ba-header-main .shopping img {
       width: 2rem; }
@@ -274,14 +269,19 @@
     .ba-header-main .shopping-cart {
       position: relative; }
     .ba-header-main .shopping-counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      right: -10px;
-      height: 16px;
+      right: -6px;
+      height: 14px;
+      width: 10px;
+      top: 0;
       border-radius: 8px;
       padding: 0 8px;
       background-color: #fd926d;
       color: #fff;
-      font-size: 12px;
+      font-size: 0.8rem;
       line-height: 16px; }
 
 .ba-slider1 {
@@ -294,8 +294,8 @@
 
 .breadcrumbs {
   display: flex;
-  border-top: solid 1px #4e4e4e;
-  border-bottom: solid 1px #4e4e4e; }
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000; }
   .breadcrumbs-nav {
     display: flex;
     list-style: none;
@@ -305,7 +305,7 @@
         margin: 1rem; } }
     .breadcrumbs-nav-item__link {
       text-decoration: none;
-      color: #4e4e4e; }
+      color: #000; }
       .breadcrumbs-nav-item__link:hover {
         text-decoration: underline; }
 
@@ -313,7 +313,7 @@
   list-style: none; }
   .category-list a {
     text-decoration: none;
-    color: #4e4e4e; }
+    color: #000; }
 
 .subscribe {
   display: flex;
@@ -362,7 +362,7 @@
 .goods-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 25px auto 0;
+  margin: 2rem auto 0;
   padding-bottom: 10px; }
 
 .card {
@@ -392,14 +392,14 @@
     justify-content: center;
     align-items: flex-start; }
     .card-body-brand {
-      color: #4e4e4e;
+      color: #000;
       font-weight: 900;
       text-transform: capitalize; }
     .card-body-title {
       text-decoration: none;
-      color: #4e4e4e; }
+      color: #000; }
     .card-body-price {
-      color: #4e4e4e; }
+      color: #000; }
   .card-add-cart {
     justify-content: center;
     align-items: center;
@@ -437,22 +437,21 @@
     width: 100%; }
 
 .ba-brands {
-  margin-top: 4rem;
-  border-top: 1px solid #4e4e4e;
-  border-bottom: 1px solid #4e4e4e;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .ba-brands .container {
-    display: none; }
-    @media screen and (min-width: 768px) {
-      .ba-brands .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; } }
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .ba-brands {
+      margin-top: 0;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; } }
+  .ba-brands-items:hover {
+    transform: scale(1.1); }
 
 .ba-footer {
-  background-color: #4e4e4e; }
+  background-color: #000; }
   .ba-footer .container {
     color: #fff;
     display: flex;
@@ -576,7 +575,7 @@
 
 .btn {
   text-decoration: none;
-  background: #4e4e4e;
+  background: #000;
   color: #fff;
   padding: 0 1em;
   border: none; }

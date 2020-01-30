@@ -308,7 +308,7 @@ $('.ba-slider2').slick({
     responsive: [{
         breakpoint: 768,
         settings: {
-            slidesToShow: 6,
+            slidesToShow: 5,
             slidesToScroll: 1,
             centerMode: false
         }
