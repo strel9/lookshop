@@ -1,23 +1,15 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const search = document.querySelector('.ba-search-form');
-    const cartBtn = document.getElementById('cart');
     const wishlistBtn = document.getElementById('wishlist');
-    const goodsWrapper = document.querySelector('.goods-wrapper');
-    const cart = document.querySelector('.cart');
-    const category = document.querySelector('.category');
-    const cartCounter = cartBtn.querySelector('.shopping-counter');
     const wishlistCounter = wishlistBtn.querySelector('.shopping-counter');
-    const cartWrapper = document.querySelector('.cart-wrapper')
+    const goodsWrapper = document.querySelector('.goods-wrapper');
+    const cartBtn = document.getElementById('cart');
+    const cart = document.querySelector('.cart');
+    const cartCounter = cartBtn.querySelector('.shopping-counter');
+    const cartWrapper = document.querySelector('.cart-wrapper');
+    const category = document.querySelector('.category');
     // console.log('wishlistCounter: ', wishlistCounter);
     const breadActiv = document.getElementById('breadcrumbs-place');
-
-
-    // const loader = () => {
-    //     goodsWrapper.innerHTML = `<div class="loader-four" id="loader-four">
-    //     <div class="loader-four__preloader"></div></div>`
-    // };
 
     const loader = () => {
         goodsWrapper.innerHTML = `<div class="loader-five">
@@ -58,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                     <div class="card-body">
                                         <p class="card-body-brand">${brand}</p>
-                                        <a class="card-body-title" href="#">${title}</a>
+                                        <p class="card-body-title" href="#">${title}</p>
                                         <p class="card-body-price">${price}<i class="fas fa-hryvnia"></i></p>
                                         <button class="card-add-cart btn" role="button" data-goods-id="${id}">
                                             Добавить в корзину<span><i class="fas fa-plus"></i></span>
@@ -125,11 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     };
-    // ---
-
-    // goodsWrapper.appendChild(createCardGoods(1, 'платье-1', 'adidas', 2000, 'img/girl_2.jpg'));
-    // goodsWrapper.appendChild(createCardGoods(2, 'платье-2', 'adidas', 3000, 'img/girl_3.jpg'));
-    // goodsWrapper.appendChild(createCardGoods(3, 'платье-3', 'adidas', 4000, 'img/girl_6.jpg'));
 
     const closeCart = (event) => {
         const target = event.target;
@@ -145,8 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     };
 
-
-
     const getGoods = (handler, filter) => {
         loader();
         fetch('db/db.json')
@@ -155,8 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(filter)
             .then(handler);
     };
-
-    // const randomSort = (item) => item.sort(() => Math.random() - 0.5);
 
     const choiceCategory = (event) => {
         event.preventDefault();
@@ -173,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(target.innerText);
         }
     };
-
 
     const searchGoods = (event) => {
         event.preventDefault();
@@ -192,17 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // input.value = '';
     }
+
     const checkCount = () => {
         wishlistCounter.textContent = wishlist.length;
         // console.log('wishlistCounter: ', wishlistCounter);
         // console.log('wishlist.length: ', wishlist.length);
         cartCounter.textContent = goodsBasket.length;
     };
-
-    // $(document).ready(function () {
-    //     checkCount();
-
-    // });
 
     const storageQuery = (get) => {
         if (get) {
@@ -234,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const addBasket = (id, elem) => {
-        // console.log(id);
+        console.log(id);
         // console.log(goodsBasket);
 
         goodsBasket.includes(element => {
@@ -260,7 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
         storageQueryBasket();
 
     };
-
 
     const toggleWishlist = (id, elem) => {
         // console.log(wishlist.indexOf(id));
@@ -301,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartBtn.addEventListener('click', openCart);
     cart.addEventListener('click', closeCart);
-    category.addEventListener('click', choiceCategory); //choiceCategory 
+    category.addEventListener('click', choiceCategory);
     search.addEventListener('submit', searchGoods);
     goodsWrapper.addEventListener('click', handlerGoods);
     wishlistBtn.addEventListener('click', showWishlist);
@@ -347,8 +324,6 @@ mobileMenu.addEventListener('click', function (event) {
 });
 
 //
-// 
-// 
 // menu 
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 500) {

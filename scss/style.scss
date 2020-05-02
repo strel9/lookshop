@@ -488,8 +488,6 @@
 		opacity: 0;
 		top: 10px;
 
-		// &-heart {}
-
 		&-heart:hover {
 			color: $primaryColor;
 		}
@@ -509,7 +507,9 @@
 		}
 
 		&-title {
-			text-decoration: none;
+			// text-decoration: none;
+			margin-top: 0;
+			margin-bottom: 0;
 			color: $secondaryColor;
 		}
 
@@ -728,6 +728,12 @@
 		border-radius: 8px;
 		margin-bottom: 10px;
 
+		&__title {
+			padding: 10px;
+			font-size: 10rem;
+			font-weight: 900;
+		}
+
 		&-img {
 			max-width: 120px;
 			border-top-left-radius: 8px;
@@ -743,12 +749,7 @@
 			flex-grow: 1;
 		}
 
-		&-title {
-			h5 {
-				font-size: 2rem;
-				font-weight: 900;
-			}
-		}
+
 
 		&-price-count {
 			padding-right: 10px;

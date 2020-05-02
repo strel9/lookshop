@@ -393,7 +393,8 @@
       font-weight: 900;
       text-transform: capitalize; }
     .card-body-title {
-      text-decoration: none;
+      margin-top: 0;
+      margin-bottom: 0;
       color: #232323; }
     .card-body-price {
       color: #232323; }
@@ -526,6 +527,10 @@
     background-color: #fff;
     border-radius: 8px;
     margin-bottom: 10px; }
+    .cart .goods__title {
+      padding: 10px;
+      font-size: 10rem;
+      font-weight: 900; }
     .cart .goods-img {
       max-width: 120px;
       border-top-left-radius: 8px;
@@ -535,9 +540,6 @@
     .cart .goods-description {
       padding: 10px;
       flex-grow: 1; }
-    .cart .goods-title h5 {
-      font-size: 2rem;
-      font-weight: 900; }
     .cart .goods-price-count {
       padding-right: 10px; }
     .cart .goods-trigger {
