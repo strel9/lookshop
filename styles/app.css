@@ -274,11 +274,6 @@
       font-size: 0.8rem;
       line-height: 16px; }
 
-.ba-slider1 {
-  display: flex; }
-  .ba-slider1 img {
-    width: 100%; }
-
 .breadcrumbs {
   display: flex;
   border-top: solid 1px #232323;
@@ -420,6 +415,9 @@
 .active {
   opacity: 1;
   color: #fd926d; }
+
+.hide {
+  display: none; }
 
 .ba-baners {
   margin-top: 4rem;

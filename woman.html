@@ -114,8 +114,7 @@
     </header>
 
     <main>
-
-        <section class="">
+        <section class="woman">
             <div class="container">
                 <nav class="breadcrumbs navbar-expand-lg ">
                     <ul class="breadcrumbs-nav">
@@ -195,11 +194,12 @@
 
         <section class="subscribe">
             <div class="container">
-                <div class="subscribe-mail ba-col-12 ba-col-md-6">
+                <form class="subscribe-mail ba-col-12 ba-col-md-6">
                     <span>Подписаться</span>
-                    <input class="subscribe-mail__input" type="email" placeholder="Ваш email">
+                    <input class="subscribe-mail__input" type="email" class="ba-form__item" placeholder="Ваш email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     <button class="subscribe-mail__btn btn_gray-brdr"><i class="fas fa-plus"></i></button>
-                </div>
+                </form>
 
                 <div class="ba-social ba-col-12 ba-col-md-4">
                     <span class="ba-col-4">Мы здесь</span>

@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="styles/app.css">
 
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
 </head>
 
 <body>
@@ -59,9 +61,7 @@
                     <nav class="ba-header-main-nav ba-col-sm-12 ba-col-sm-8 ba-col-md-8">
                         <ul class="ba-menu">
                             <li class="ba-menu-item">
-                                <a href="./woman.html" class="ba-menu__link btn_white-brdr">Женщинам
-                                    <!-- <span><i class="fas fa-sort-down"></i></span> -->
-                                </a>
+                                <a href="./woman.html" class="ba-menu__link btn_white-brdr woman-page">Женщинам</a>
                             </li>
                             <li class="ba-menu-item">
                                 <a href="#" class="ba-menu__link btn_white-brdr">Мужчинам
@@ -115,21 +115,22 @@
 
     <main>
         <section class="ba-hero">
-            <!-- <div class="container"> -->
-            <div class="ba-slider1">
-
-                <div>
-                    <img src="./img/banner4.jpg" alt="">
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide-1">
+                            <img src="./img/banner4.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide slide-2">
+                            <img src="./img/banner.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide slide-3">
+                            <img src="./img/banner1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div>
-                    <img src="./img/banner.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./img/banner1.jpg" alt="">
-                </div>
-
             </div>
-            <!-- </div> -->
         </section>
 
         <section class="ba-brands">
@@ -163,7 +164,6 @@
 
         </section>
 
-
         <section class="ba-baners">
 
             <div class="container">
@@ -190,7 +190,7 @@
 
         </section>
 
-        <section class="goods">
+        <!-- <section class="goods">
 
             <div class="container">
                 <div>
@@ -214,7 +214,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-2.jpg" alt="${title}">
@@ -232,7 +232,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-3.jpg" alt="${title}">
@@ -250,7 +250,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-4.jpg" alt="${title}">
@@ -268,7 +268,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-5.jpg" alt="${title}">
@@ -286,7 +286,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-1.jpg" alt="${title}">
@@ -304,7 +304,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-2.jpg" alt="${title}">
@@ -322,7 +322,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-3.jpg" alt="${title}">
@@ -340,7 +340,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-4.jpg" alt="${title}">
@@ -358,7 +358,7 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+
                     <div class="card ba-col-12 ba-col-sm-6">
                         <div class="card-img-wrapper">
                             <img class="" src="./db/img-card/dresses/dress-5.jpg" alt="${title}">
@@ -376,11 +376,87 @@
                             </button>
                         </div>
                     </div>
-                    <!--  -->
+                </div>
+            </div>
+        </section> -->
+
+        <section class="woman">
+            <div class="container">
+                <nav class="breadcrumbs navbar-expand-lg ">
+                    <ul class="breadcrumbs-nav">
+                        <li class="breadcrumbs-nav-item">
+                            <a class="breadcrumbs-nav-item__link" href="./index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs-nav-item">
+                            <span class="">></span>
+                        </li>
+                        <li class="breadcrumbs-nav-item">
+                            <a class="breadcrumbs-nav-item__link" href="./woman.html">Одежда</a>
+                        </li>
+                        <li class="breadcrumbs-nav-item">
+                            <span class="">></span>
+                        </li>
+                        <li class="breadcrumbs-nav-item">
+                            <a class="breadcrumbs-nav-item__link" id="breadcrumbs-place" href="#"></a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="goods-woman-wrapper">
+
+                    <aside class="category">
+                        <!-- <div class="breadcrumbs">
+                            <a href="#">Главная</a>
+                            <span>></span>
+                            <a href="#">Женщинам</a>
+                        </div> -->
+                        <h5 class="category__title">Категории</h5>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__dresses"
+                                    data-category="dresses">Платья</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__skirts"
+                                    data-category="skirts">Юбки</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__electron"
+                                    data-category="tops">Топы</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__tops"
+                                    data-category="svitera">Свитера</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__sport"
+                                    data-category="sport">Спорт</a>
+                            </li>
+                        </ul>
+                        <!-- <h5 class="category__title">Бренды</h5>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" class="category-item__link category-item__" data-category="dresses">Balmain</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item__link category-item__" data-category="skirts">Balenciaga</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item__link category-item__" data-category="tops">MaxMara</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item__link category-item__" data-category="svitera">Prada</a>
+                            </li>
+                            <li>
+                                <a href="#" class="category-item__link category-item__" data-category="sport">Valentino</a>
+                            </li>
+                        </ul> -->
+                    </aside>
+                    <div class="ba-row goods-wrapper">
+                    </div>
                 </div>
             </div>
         </section>
-
 
         <section class="subscribe">
             <div class="container">
@@ -407,6 +483,7 @@
             </div>
 
         </section>
+
 
         <section class="ba-about">
             <div class="container">
@@ -626,8 +703,6 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
     <footer class="ba-footer">
@@ -692,13 +767,13 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <!-- tweenmax для снега -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
     <!--  <script src="https://kit.fontawesome.com/1c19972f1c.js" crossorigin="anonymous"></!-->
-
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src='./js/index.js'></script>
 
     <!-- <script src="//code.jivosite.com/widget/CDvr0Rm1YG" async></script> -->

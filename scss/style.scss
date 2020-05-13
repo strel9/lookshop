@@ -47,7 +47,6 @@
 					border: 0;
 				}
 
-				&-btn {}
 
 				// position: fixed;
 				// top: 0;
@@ -287,26 +286,25 @@
 	}
 }
 
+// .ba-slider1 {
+// 	display: flex;
+// 	// margin-right: auto;
+// 	// margin-left: auto;
 
-.ba-slider1 {
-	display: flex;
-	// margin-right: auto;
-	// margin-left: auto;
 
+// 	img {
+// 		width: 100%;
+// 	}
+// }
 
-	img {
-		width: 100%;
-	}
-}
+// .ba-slider1 .slick-dots {
+// 	// bottom: 2rem;
+// 	// height: ;
+// }
 
-.ba-slider1 .slick-dots {
-	// bottom: 2rem;
-	// height: ;
-}
-
-.ba-slider2 {
-	// overflow: visible;
-}
+// .ba-slider2 {
+// 	// overflow: visible;
+// }
 
 
 .breadcrumbs {
@@ -442,8 +440,6 @@
 
 }
 
-
-
 // меню на второй странице
 .goods-woman-wrapper {
 	display: flex;
@@ -556,7 +552,9 @@
 	color: $primaryColor;
 }
 
-
+.hide {
+	display: none;
+}
 
 .ba-baners {
 	// padding: 0 15px;
@@ -590,7 +588,6 @@
 
 }
 
-
 .ba-brands {
 
 	display: none;
@@ -616,9 +613,6 @@
 
 	// }
 }
-
-.ba-about {}
-
 
 .ba-footer {
 	background-color: $secondaryColor;
@@ -816,10 +810,6 @@
 
 }
 
-
-
-
-
 // 
 // .btn_black-brdr {
 // 	background: -webkit-gradient(linear, left bottom, left top, color-stop(52%, #fff), color-stop(48%, #232323)) left top/100% 200% no-repeat;
@@ -940,6 +930,7 @@
 // 	animation: spin 1.5s linear infinite;
 // }
 
+// loader
 .loader-five,
 .loader-five__dot {
 	position: relative;
@@ -1073,3 +1064,5 @@
 		transform: rotate(360deg);
 	}
 }
+
+// loader
