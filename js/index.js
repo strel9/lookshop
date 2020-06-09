@@ -21,7 +21,7 @@ const baHeaderTop = document.querySelector('.ba-header__top');
 const baHeaderMain = document.querySelector('.ba-header__main');
 //Mobile menu
 const mobileMenu = document.querySelector('.mobile-menu-btn');
-const menuList = document.querySelector('.ba-menu');
+const menuList = document.querySelector('.ba-menu__list');
 
 let wishlist = [];
 let goodsBasket = [];
@@ -305,7 +305,7 @@ goodsWrapper.addEventListener('click', handlerGoods);
 wishlistBtn.addEventListener('click', showWishlist);
 mobileMenu.addEventListener('click', (e) => {
 	e.preventDefault();
-	menuList.classList.toggle('ba-menu--active');
+	menuList.classList.toggle('ba-menu__list--active');
 });
 womanPage.addEventListener('click', showWoman);
 
