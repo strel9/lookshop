@@ -23,72 +23,66 @@
 <body>
 
     <header class="ba-header">
-        <div class="ba-header-top">
+        <div class="ba-header__top">
             <div class="container">
-                <div class="ba-header-top-contacts ">
-                    <span class="ba-header-top-contacts__phone">
-                        <i class="fas fa-phone-alt"></i>
-                        8 800 123 45 67
-                    </span>
-                    <!-- <a class="ba-header-top-contacts__link" href="./contact.html">
-                        Контакты
-                    </a> -->
-                </div>
-                <div class="ba-header-top-user">
-                    <!-- <div class="user__currency">$us<span><i class="fas fa-sort-down"></i></span></div> -->
-                    <!-- <div class="user__account">личный кабинет</div> -->
-                    <!-- <select class="ba-header-top-user__currency" name="" id="" autofocus>
-                        <option value="">uah</option>
-                        <option value="">$</option>
-                    </select> -->
-                    <form class="ba-search-form">
-                        <input class="ba-search-form__input" type="text" id="searchInput">
-                        <button type="submit" id="search-btn" class="ba-search-btn" aria-label="Поиск товаров">
-                            <i class="fas fa-search"></i></button>
+                <div class="ba-header__top-inner">
+                    <div class="contacts">
+                        <span class="contacts__phone">
+                            <i class="fas fa-phone-alt"></i>
+                            8 800 123 45 67
+                        </span>
+                    </div>
+                    <div class="user">
+                        <div class="user__account">личный кабинет</div>
+                        <select class="user__currency" name="" id="" autofocus>
+                            <option value="">uah</option>
+                            <option value="">$</option>
+                        </select>
+                        <form class="search-form">
+                            <input class="search-form__input" type="text" id="searchInput">
+                            <button class="search-form__btn" type="submit" id="search-btn" aria-label="Поиск товаров">
+                                <i class="fas fa-search"></i></button>
 
-                        <!-- <div class="user__search"></div> -->
-                    </form>
+                            <!-- <div class="user__search"></div> -->
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="ba-header-main">
+        <div class="ba-header__main">
             <div class="container">
-                <div class="ba-header-main-wrapper">
-                    <a href="#" class="mobile-menu-btn ba-col-2"><i class="fas fa-bars"></i></a>
-                    <a class="ba-header-main-logo ba-col-6 ba-col-sm-2 ba-col-md-2" href="./index.html">
+                <div class="ba-header__main-inner">
+                    <a class="mobile-menu-btn ba-col-2" href="#"><i class="fas fa-bars"></i></a>
+                    <a class="ba-header__main-logo ba-col-6 ba-col-sm-2 ba-col-md-2" href="./index.html">
                         <img src="./img/logo.png" alt="logo">
                     </a>
-                    <nav class="ba-header-main-nav ba-col-sm-12 ba-col-sm-8 ba-col-md-8">
-                        <ul class="ba-menu">
-                            <li class="ba-menu-item">
-                                <a href="./woman.html" class="ba-menu__link btn_white-brdr woman-page">Женщинам</a>
+                    <nav class="ba-menu ba-col-sm-12 ba-col-sm-8 ba-col-md-8">
+                        <ul class="ba-menu__list">
+                            <li class="ba-menu__list-item">
+                                <a class="ba-menu__list-item-link btn_white-brdr woman-page"
+                                    href="./woman.html">Женщинам</a>
                             </li>
-                            <li class="ba-menu-item">
-                                <a href="#" class="ba-menu__link btn_white-brdr">Мужчинам
-                                    <!-- <span><i class="fas fa-sort-down"></i></span> -->
+                            <li class="ba-menu__list-item">
+                                <a class="ba-menu__list-item-link btn_white-brdr" href="#">Мужчинам
                                 </a>
                             </li>
-                            <li class="ba-menu-item">
-                                <a href="#" class="ba-menu__link btn_white-brdr">Бренды
-                                    <!-- <span><i class="fas fa-sort-down"></i></span> -->
+                            <li class="ba-menu__list-item">
+                                <a class="ba-menu__list-item-link btn_white-brdr" href="#">Бренды
                                 </a>
                             </li>
-                            <li class="ba-menu-item">
-                                <a href="#" class="ba-menu__link btn_white-brdr">Sale</a>
+                            <li class="ba-menu__list-item">
+                                <a class="ba-menu__list-item-link btn_white-brdr" href="#">Sale</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="shopping ba-col-3 ba-col-sm-2 ba-col-md-2">
-                        <a class="shopping-favorites" href="#" id="wishlist">
+                        <a class="shopping__favorites" href="#" id="wishlist">
                             <img src="img/favorites.png" alt="">
-                            <span class="shopping-counter">0</span>
+                            <span class="shopping__counter">0</span>
                         </a>
-                        <a class="shopping-cart" href="#" id="cart">
-                            <!-- <div> -->
+                        <a class="shopping__cart" href="#" id="cart">
                             <img src="img/cart.png" alt="">
-                            <span class="shopping-counter">0</span>
-                            <!-- </div> -->
-                            <!-- <span class="pull-right">0 items | $ 0</span> -->
+                            <span class="shopping__counter">0</span>
                         </a>
                     </div>
 
@@ -134,53 +128,45 @@
         </section>
 
         <section class="ba-brands">
-            <!-- <div class="container"> -->
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_1.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_1.png" alt="">
             </a>
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_2.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_2.png" alt="">
             </a>
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_4.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_4.png" alt="">
             </a>
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_5.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_5.png" alt="">
             </a>
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_6.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_6.png" alt="">
             </a>
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_7.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_7.png" alt="">
             </a>
-            <!-- <a class="ba-brands-items" href="#">
-                <img src="./img/brand_8.png" alt="" class="brands-items__img">
-            </a> -->
-            <a class="ba-brands-items" href="#">
-                <img src="./img/brand_3.png" alt="" class="brands-items__img">
+            <a class="ba-brands__items" href="#">
+                <img class="brands__items-img" src="./img/brand_3.png" alt="">
             </a>
-
-            <!-- </div> -->
-
         </section>
 
         <section class="ba-baners">
-
             <div class="container">
-                <div class="look-row ba-baners__item">
-                    <a href="#" class="ba-baners__item ba-col-6 ba-baners-row ba-baners-left">
-                        <img src="./img/best_outfits.jpg" alt="">
+                <div class="ba-baners__item look-row">
+                    <a class="ba-baners__item ba-col-6 ba-baners-row ba-baners-left" href="#">
+                        <img class="ba-baners__img" src="./img/best_outfits.jpg" alt="">
                     </a>
                     <div class="ba-baners__item ba-col-6 ba-baners-row">
-                        <a href="#" class="look-row">
-                            <img src="./img/party_collection.jpg" alt="">
+                        <a class="look-row" href="#">
+                            <img class="ba-baners__img" src="./img/party_collection.jpg" alt="">
                         </a>
                         <div class="look-row">
-                            <a href="#" class="ba-baners__item ba-col-6">
-                                <img src="./img/best_sellers.jpg" alt="">
+                            <a class="ba-baners__item ba-col-6" href="#">
+                                <img class="ba-baners__img" src="./img/best_sellers.jpg" alt="">
                             </a>
-                            <a href="#" class="ba-baners__item ba-col-6">
-                                <img src="./img/fall_leather.jpg" alt="">
+                            <a class="ba-baners__item ba-col-6" href="#">
+                                <img class="ba-baners__img" src="./img/fall_leather.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -460,24 +446,26 @@
 
         <section class="subscribe">
             <div class="container">
-                <form class="subscribe-mail ba-col-12 ba-col-md-6">
-                    <span>Подписаться</span>
-                    <input class="subscribe-mail__input" type="email" class="ba-form__item" placeholder="Ваш email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <button class="subscribe-mail__btn btn_gray-brdr"><i class="fas fa-plus"></i></button>
-                    <!-- <span style="color: red; position: relative; top: -20px;">You entered wrong mail!!</span> -->
-                </form>
+                <div class="subscribe-inner">
+                    <form class="subscribe-mail ba-col-12 ba-col-md-6">
+                        <span>Подписаться</span>
+                        <input class="subscribe-mail__input" type="email" class="ba-form__item" placeholder="Ваш email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <button class="subscribe-mail__btn btn_gray-brdr"><i class="fas fa-plus"></i></button>
+                        <!-- <span style="color: red; position: relative; top: -20px;">You entered wrong mail!!</span> -->
+                    </form>
 
-                <div class="ba-social ba-col-12 ba-col-md-4">
-                    <span class="ba-social__descr ba-col-4">Мы здесь:</span>
+                    <div class="ba-social ba-col-12 ba-col-md-4">
+                        <span class="ba-social__descr ba-col-4">Мы здесь:</span>
 
-                    <div class="ba-social-wrapper">
-                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-twitter"
-                                aria-hidden="true"></i></a>
-                        <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-instagram"
-                                aria-hidden="true"></i></a>
+                        <div class="ba-social-wrapper">
+                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-twitter"
+                                    aria-hidden="true"></i></a>
+                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -498,208 +486,210 @@
 
         <section class="map-section">
             <div class="container">
-                <div class="ba-col-4">
-                    <h5>Наши магазины:</h5>
-                    <h6>Харьков</h6>
-                    <i class="fas fa-map-marker-alt"></i> <span>ул.Cумская 75</span>
-                    <!-- <h6>Киев</h6> -->
+                <div class="map-section__inner">
+                    <div class="ba-col-4">
+                        <h5>Наши магазины:</h5>
+                        <h6>Харьков</h6>
+                        <i class="fas fa-map-marker-alt"></i> <span>ул.Cумская 75</span>
+                        <!-- <h6>Киев</h6> -->
 
-                </div>
-                <div class="ba-col-8 map-section-google scroll-to" id="map">
-                    <script>
-                        function initMap() {
-                            let map;
-                            let nolan = { lat: 50.0115159, lng: 36.2429247 };
-                            // let myCenter = { lat: 40.673443, lng: -73.896206 };
-                            let myCenter = { lat: 50.010335, lng: 36.243487 };
-                            // 50.0041002,36.2353144,17.42
+                    </div>
+                    <div class="map-section__google scroll-to ba-col-8" id="map">
+                        <script>
+                            function initMap() {
+                                let map;
+                                let nolan = { lat: 50.0115159, lng: 36.2429247 };
+                                // let myCenter = { lat: 40.673443, lng: -73.896206 };
+                                let myCenter = { lat: 50.010335, lng: 36.243487 };
+                                // 50.0041002,36.2353144,17.42
 
-                            map = new google.maps.Map(document.getElementById('map'), {
-                                center: myCenter,
-                                // height: 700,
-                                // icon: './img/pin.png',
-                                // icon: './img/cupcake.svg',
-                                zoom: 15,
-                                styles: [
-                                    {
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#f5f5f5"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "elementType": "labels.icon",
-                                        "stylers": [
-                                            {
-                                                "visibility": "off"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#616161"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "elementType": "labels.text.stroke",
-                                        "stylers": [
-                                            {
-                                                "color": "#f5f5f5"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "administrative.land_parcel",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#bdbdbd"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "poi",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#eeeeee"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "poi",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#757575"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "poi.park",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#e5e5e5"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "poi.park",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#9e9e9e"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "road",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#ffffff"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "road.arterial",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#757575"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "road.highway",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#dadada"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "road.highway",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#616161"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "road.local",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#9e9e9e"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "transit.line",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#e5e5e5"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "transit.station",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#eeeeee"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "water",
-                                        "elementType": "geometry",
-                                        "stylers": [
-                                            {
-                                                "color": "#c9c9c9"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "featureType": "water",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [
-                                            {
-                                                "color": "#9e9e9e"
-                                            }
-                                        ]
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                    center: myCenter,
+                                    // height: 700,
+                                    // icon: './img/pin.png',
+                                    // icon: './img/cupcake.svg',
+                                    zoom: 15,
+                                    styles: [
+                                        {
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#f5f5f5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "elementType": "labels.icon",
+                                            "stylers": [
+                                                {
+                                                    "visibility": "off"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#616161"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "elementType": "labels.text.stroke",
+                                            "stylers": [
+                                                {
+                                                    "color": "#f5f5f5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "administrative.land_parcel",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#bdbdbd"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#eeeeee"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#757575"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi.park",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#e5e5e5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "poi.park",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#9e9e9e"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#ffffff"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.arterial",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#757575"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#dadada"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.highway",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#616161"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "road.local",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#9e9e9e"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit.line",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#e5e5e5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "transit.station",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#eeeeee"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "water",
+                                            "elementType": "geometry",
+                                            "stylers": [
+                                                {
+                                                    "color": "#c9c9c9"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "featureType": "water",
+                                            "elementType": "labels.text.fill",
+                                            "stylers": [
+                                                {
+                                                    "color": "#9e9e9e"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                });
+
+                                let marker = new google.maps.Marker({
+                                    position: nolan,
+                                    map: map,
+                                    // title: '123',
+
+                                    icon: {
+                                        url: './img/pin.svg',
+                                        origin: new google.maps.Point(0, 0),
+                                        size: new google.maps.Size(62, 62)
+                                        // anchor: new google.maps.Anchor(62, 62),
                                     }
-                                ]
-                            });
-
-                            let marker = new google.maps.Marker({
-                                position: nolan,
-                                map: map,
-                                // title: '123',
-
-                                icon: {
-                                    url: './img/pin.svg',
-                                    origin: new google.maps.Point(0, 0),
-                                    size: new google.maps.Size(62, 62)
-                                    // anchor: new google.maps.Anchor(62, 62),
-                                }
-                            });
-                        }
-                    </script>
-                    <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ&callback=initMap"></script>
-                    <!-- AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ -->
-                    <!-- https://maps.googleapis.com/maps/api/staticmap?key=YOUR_API_KEY&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 -->
+                                });
+                            }
+                        </script>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ&callback=initMap"></script>
+                        <!-- AIzaSyBW1OmFxMxpAaNmaKaHgg9nQSV6OoLTqPQ -->
+                        <!-- https://maps.googleapis.com/maps/api/staticmap?key=YOUR_API_KEY&center=47.65,-122.35000000000002&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -777,6 +767,7 @@
     <script src='./js/index.js'></script>
 
     <!-- <script src="//code.jivosite.com/widget/CDvr0Rm1YG" async></script> -->
+
 
 </body>
 

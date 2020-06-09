@@ -7,10 +7,6 @@
   margin: 0 auto;
   padding: 0 15px; }
 
-.look-row {
-  display: flex;
-  flex-wrap: wrap; }
-
 /* Ba-grid  */
 .ba-row {
   display: flex;
