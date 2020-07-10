@@ -7,7 +7,6 @@
   margin: 0 auto;
   padding: 0 15px; }
 
-/* Ba-grid  */
 .ba-row {
   display: flex;
   flex-wrap: wrap;
@@ -57,19 +56,6 @@
 
 .ba-col-12 {
   width: 100%; }
-
-/* ba-common */
-.ba-text-center {
-  text-align: center; }
-
-.ba-text-left {
-  text-align: left; }
-
-.ba-text-right {
-  text-align: right; }
-
-.ba-text-justify {
-  text-align: justify; }
 
 @media screen and (min-width: 576px) {
   .ba-col-sm-12 {
@@ -148,3 +134,16 @@
     width: 16.66%; }
   .ba-col-lg-1 {
     width: 8.33%; } }
+
+/* ba-common */
+.ba-text-center {
+  text-align: center; }
+
+.ba-text-left {
+  text-align: left; }
+
+.ba-text-right {
+  text-align: right; }
+
+.ba-text-justify {
+  text-align: justify; }

@@ -6,7 +6,7 @@ const wishlistCounter = wishlistBtn.querySelector('.shopping__counter');
 const goodsWrapper = document.querySelector('.goods-wrapper');
 const cartBtn = document.getElementById('cart');
 const cart = document.querySelector('.cart');
-const cartWrapper = document.querySelector('.cart-wrapper');
+const cartWrapper = document.querySelector('.cart__wrapper');
 const cartCounter = cartBtn.querySelector('.shopping__counter');
 const category = document.querySelector('.category');
 // console.log('wishlistCounter: ', wishlistCounter);
@@ -21,7 +21,7 @@ const baHeaderTop = document.querySelector('.ba-header__top');
 const baHeaderMain = document.querySelector('.ba-header__main');
 //Mobile menu
 const mobileMenu = document.querySelector('.mobile-menu-btn');
-const menuList = document.querySelector('.ba-menu__list');
+const menuList = document.querySelector('.ba-menu');
 
 let wishlist = [];
 let goodsBasket = [];
@@ -46,7 +46,7 @@ const loader = () => {
             <div class="dot"></div>
             <div class="dot"></div>
             </div>
-        </div>`
+        </div>`;
 };
 
 // запрос в базу
@@ -62,12 +62,13 @@ const getGoods = (handler, filter) => {
 // создание карточки товара
 const createCardGoods = (id, title, brand, price, img) => {
 	const card = document.createElement('div');
-	// ./img/girl_2.jpg
 	card.className = 'col-12 col-md-6 col-lg-4 col-xl-3';
 	card.innerHTML = `<div class="card">
                         <div class="card__top">
                             <img class="card__img" src="${img}" alt="${title}">
-                            <button class="card__add-wishlist ${wishlist.includes(id) ? 'active' : ''}" data-goods-id="${id}">
+                            <button class="card__add-wishlist ${
+															wishlist.includes(id) ? 'active' : ''
+														}" data-goods-id="${id}">
                                 <i class="card__add-wishlist-heart fas fa-heart"></i>
                             </button>
                         </div>
@@ -75,12 +76,13 @@ const createCardGoods = (id, title, brand, price, img) => {
                             <p class="card__body-brand">${brand}</p>
                             <p class="card__body-title" href="#">${title}</p>
                             <p class="card__body-price">${price}<i class="fas fa-hryvnia"></i></p>
-                            <button class="card__add-cart btn" role="button" data-goods-id="${id}">
+							<button class="card__add-cart btn" role="button" 
+								data-goods-id="${id}"
+								data-goods-price="${price}" >
                                 Добавить в корзину<span><i class="plus fas fa-plus"></i></span>
                             </button>
                         </div>
                     </div>`;
-	// console.log(card);
 	return card;
 };
 
@@ -106,7 +108,6 @@ const storageQuery = (get) => {
 		if (localStorage.getItem('look-wishlist')) {
 			JSON.parse(localStorage.getItem('look-wishlist')).forEach((id) => wishlist.push(id));
 		}
-
 	} else {
 		localStorage.setItem('look-wishlist', JSON.stringify(wishlist));
 	}
@@ -119,7 +120,6 @@ const closeCart = (e) => {
 	if (target === cart || target.classList.contains('cart-close')) {
 		cart.style.display = 'none';
 	}
-
 };
 // открыть корзину
 const openCart = () => {
@@ -137,10 +137,8 @@ const storageQueryBasket = (get) => {
 		}
 	} else {
 		localStorage.setItem('look-basket', JSON.stringify(goodsBasket));
-
 	}
 	checkCount();
-
 };
 
 //рендер корзины окна
@@ -148,41 +146,45 @@ const renderBasket = () => {
 	cartWrapper.textContent = '';
 
 	if (goodsBasket.length) {
-		goodsBasket.forEach(({ cartId, quantity }) => {
+		goodsBasket.forEach((item) => {
 			// const { id, title, brand, price, imgCart } = item;
 			// cartWrapper.append(createCartGoodsBasket(id, title, brand, price, imgCart));
-			cartWrapper.append(createCartGoodsBasket(cartId, quantity));
+			cartWrapper.append(createCartGoodsBasket(item));
 			// console.log(item);
 		});
 	} else {
 		cartWrapper.innerHTML = '<div id="cart-empty">Ваша корзина пуста</div >';
 	}
-	console.log(goodsBasket.length)
+	console.log(goodsBasket.length);
 };
 
 //рендер товаров в корзине
 // const createCartGoodsBasket = (id, title, brand, price, img) => {
-const createCartGoodsBasket = (cartId, quantity) => {
+// const createCartGoodsBasket = (cartId, quantity) => {
+const createCartGoodsBasket = ({ brand, title, price, quantity }) => {
 	const cart = document.createElement('div');
 	const img = './img/girl_2.jpg';
-	const brand = 'ТЕСТ';
-	const title = 'ТЕСТ';
-	const price = 'ТЕСТ';
-	cart.className = 'goods';
-	cart.innerHTML = `<div class="card">
-                            <div class="card-img-wrapper">
-                                <img class="" src="${img}" alt="${title}">
-                                <button class="card-add-wishlist ${wishlist.includes(cartId) ? 'active' : ''}"
-                                    data-goods-id="${cartId}">
-                                    <i class="fas fa-heart card-add-wishlist-heart"></i>
-                                </button>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-body-brand">${brand}</p>
-                                <a href="#">${title}</a>
-                                <p class="card-body-price">${price}<i class="fas fa-hryvnia"></i></p>
-                            </div>
-                        </div>`;
+	// console.log(item);
+	// const brand = 'ТЕСТ';
+	// const title = 'ТЕСТ';
+	// const price = 'ЦЕНА ТЕСТ';
+	cart.className = 'goodsIncart-wrapper';
+	cart.innerHTML = `	<div class="card">
+							<div class="card__top">
+								<img class="card__img" src="${img}" alt="${title}">
+							</div>
+							<div class="card__body">
+								<p class="card__body-brand">${brand}</p>
+								<a class="card__body-title" href="#">${title}</a>
+							</div>
+						</div>
+						<div>
+							<p class="card__body-price">${price}<i class="fas fa-hryvnia"></i></p>
+							<p class="card__body-quantity">${quantity}</p>
+							<button>перенести в вишлист</button>
+							<button>удалить</button>
+						</div>
+						`;
 	return cart;
 };
 // addBasket(target.dataset.goodsId, target);
@@ -196,6 +198,7 @@ const checkCount = () => {
 	// console.log('wishlist.length: ', wishlist.length);
 };
 
+// добавляение в массив корзины
 const addBasket = (id, element) => {
 	// goodsBasket.includes(element => {
 	// });
@@ -203,7 +206,11 @@ const addBasket = (id, element) => {
 		// goodsBasket.splice(goodsBasket.indexOf(id), 1);
 	} else {
 		// const a = { id, 1};
-		goodsBasket.push({ cartId: id, quantity: 1 });
+		const brand = element.parentNode.querySelector('.card__body-brand').innerText;
+		const title = element.parentNode.querySelector('.card__body-title').innerText;
+		const price = element.parentNode.querySelector('.card__body-price').innerText;
+
+		goodsBasket.push({ cartId: id, brand, title, price, quantity: 1 });
 		// console.log(goodsBasket);
 	}
 
@@ -215,7 +222,6 @@ const addBasket = (id, element) => {
 	// console.log('goodsBasket: ', goodsBasket);
 	checkCount();
 	storageQueryBasket();
-
 };
 
 // переключение сердечка
@@ -240,18 +246,19 @@ const handlerGoods = (e) => {
 	if (target.classList.contains('card__add-wishlist-heart')) {
 		// console.log(target.parentNode.dataset.goodsId);
 		toggleWishlist(target.parentNode.dataset.goodsId, target);
-	};
+	}
 
 	if (target.classList.contains('card__add-cart')) {
 		addBasket(target.dataset.goodsId, target);
 		// console.log(target.dataset.goodsId);
 		// console.log(target);
-	};
-}
+		// console.log(target.dataset.goodsPrice);
+	}
+};
 
 // вывести товары вишлиста
 const showWishlist = () => {
-	getGoods(renderCard, goods => goods.filter(item => wishlist.includes(item.id)))
+	getGoods(renderCard, (goods) => goods.filter((item) => wishlist.includes(item.id)));
 };
 
 // вкладка woman
@@ -260,21 +267,21 @@ const showWoman = (e) => {
 	baHero.classList.add('hide');
 	baBrands.classList.add('hide');
 	baBaners.classList.add('hide');
-}
+};
 
 // вывести товары по категории
 const choiceCategory = (e) => {
 	e.preventDefault();
 	const target = e.target;
 
-	if (target.classList.contains('category-item__link')) {
+	if (target.classList.contains('category__link')) {
 		// console.log(target.dataset.category);
 
 		const category = target.dataset.category;
 		getGoods(renderCard, (goods) => goods.filter((item) => item.category.includes(category)));
 		// вот здесь создавать текущую хлеб крошку target.dataset.category
 		breadActiv.innerText = ' ';
-		breadActiv.innerText = target.innerText;
+		breadActiv.innerText = '>' + target.innerText;
 		// console.log(target.innerText);
 	}
 };
@@ -290,12 +297,11 @@ const searchGoods = (e) => {
 		const searchString = new RegExp(inputValue, 'i');
 		// console.log(searchString);
 		// console.log(item.title);
-		getGoods(renderCard, goods => goods.filter((item) =>
-			searchString.test(item.title)));
+		getGoods(renderCard, (goods) => goods.filter((item) => searchString.test(item.title)));
 	}
 
 	// input.value = '';
-}
+};
 
 cartBtn.addEventListener('click', openCart);
 cart.addEventListener('click', closeCart);
@@ -305,7 +311,7 @@ goodsWrapper.addEventListener('click', handlerGoods);
 wishlistBtn.addEventListener('click', showWishlist);
 mobileMenu.addEventListener('click', (e) => {
 	e.preventDefault();
-	menuList.classList.toggle('ba-menu__list--active');
+	menuList.classList.toggle('ba-menu--active');
 });
 womanPage.addEventListener('click', showWoman);
 
@@ -314,38 +320,36 @@ getGoods(renderCard);
 
 storageQuery(true);
 
-window.addEventListener(('scroll'), () => {
+window.addEventListener('scroll', () => {
 	if (window.scrollY >= 500) {
 		baHeader.style.position = 'fixed';
 		baHeader.style.zIndex = '1';
 		baHeaderTop.style.display = 'none';
 		baHeader.style.width = '100%';
-	}
-	else {
+	} else {
 		baHeader.style.position = 'static';
 		baHeader.style.zIndex = '1';
 		baHeaderTop.style.display = 'flex';
 		baHeaderMain.style.width = '100%';
-	};
-})
+	}
+});
 // menu scroll
 
 //слайдер
 new Swiper('.swiper-container', {
 	loop: true,
 	autoplay: {
-		delay: 6000,
-		autoplay: false,
+		delay: 2000,
+		autoplay: true,
 	},
 	// slidesPerView : 3,
 	// direction: 'vertical',
 	speed: 300,
 	pagination: {
-		el: '.swiper-pagination',
+		// el: '.swiper-pagination',
 		dynamicBullets: true,
 	},
-})
-
+});
 
 // меню эффект
 // document.querySelectorAll('.ba-menu__link').forEach((elem) => {

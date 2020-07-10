@@ -16,7 +16,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
@@ -25,15 +25,14 @@
     <header class="ba-header">
         <div class="ba-header__top">
             <div class="container">
-                <div class="ba-header__top-inner">
+                <div class="ba-header__top-wrapper">
                     <div class="contacts">
-                        <span class="contacts__phone">
+                        <div class="contacts__phone">
                             <i class="fas fa-phone-alt"></i>
-                            8 800 123 45 67
-                        </span>
+                            <a class="contacts__phone-link" href="tel:88001234567">8 800 123 45 67</a>
+                        </div>
                     </div>
                     <div class="user">
-                        <div class="user__account">личный кабинет</div>
                         <select class="user__currency" name="" id="" autofocus>
                             <option value="">uah</option>
                             <option value="">$</option>
@@ -45,13 +44,15 @@
 
                             <!-- <div class="user__search"></div> -->
                         </form>
+                        <a class="user__account" href="#">личный кабинет</a>
+
                     </div>
                 </div>
             </div>
         </div>
         <div class="ba-header__main">
             <div class="container">
-                <div class="ba-header__main-inner">
+                <div class="ba-header__main-wrapper">
                     <a class="mobile-menu-btn ba-col-2 ba-col-sm-1" href="#">
                         <i class="fas fa-bars"></i>
                     </a>
@@ -114,51 +115,53 @@
         </section>
 
         <section class="ba-brands">
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_1.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_1.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_2.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_2.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_4.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_4.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_5.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_5.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_6.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_6.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_7.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_7.png" alt="">
             </a>
-            <a class="ba-brands__items" href="#">
-                <img class="brands__items-img" src="./img/brand_3.png" alt="">
+            <a class="ba-brands__item" href="#">
+                <img class="brands__item-img" src="./img/brand_3.png" alt="">
             </a>
         </section>
 
         <section class="ba-baners">
+
             <div class="container">
-                <div class="ba-baners__item look-row">
-                    <a class="ba-baners__item ba-col-6 ba-baners-row ba-baners-left" href="#">
-                        <img class="ba-baners__img" src="./img/best_outfits.jpg" alt="">
-                    </a>
-                    <div class="ba-baners__item ba-col-6 ba-baners-row">
-                        <a class="look-row" href="#">
-                            <img class="ba-baners__img" src="./img/party_collection.jpg" alt="">
+                <div class="ba-baners__wrapper">
+                    <div class="ba-baners__item look-row">
+                        <a class="ba-baners__item ba-col-6 ba-baners-row ba-baners-left" href="#">
+                            <img class="ba-baners__img" src="./img/best_outfits.jpg" alt="">
                         </a>
-                        <div class="look-row">
-                            <a class="ba-baners__item ba-col-6" href="#">
-                                <img class="ba-baners__img" src="./img/best_sellers.jpg" alt="">
+                        <div class="ba-baners__item ba-col-6 ba-baners-row">
+                            <a class="look-row" href="#">
+                                <img class="ba-baners__img" src="./img/party_collection.jpg" alt="">
                             </a>
-                            <a class="ba-baners__item ba-col-6" href="#">
-                                <img class="ba-baners__img" src="./img/fall_leather.jpg" alt="">
-                            </a>
+                            <div class="look-row">
+                                <a class="ba-baners__item ba-col-6" href="#">
+                                    <img class="ba-baners__img" src="./img/best_sellers.jpg" alt="">
+                                </a>
+                                <a class="ba-baners__item ba-col-6" href="#">
+                                    <img class="ba-baners__img" src="./img/fall_leather.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
         </section>
 
@@ -355,76 +358,52 @@
         <section class="woman">
             <div class="container">
                 <nav class="breadcrumbs navbar-expand-lg ">
-                    <ul class="breadcrumbs-nav">
-                        <li class="breadcrumbs-nav-item">
-                            <a class="breadcrumbs-nav-item__link" href="./index.html">Главная</a>
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="./index.html">Главная</a>
                         </li>
-                        <li class="breadcrumbs-nav-item">
+                        <li class="breadcrumbs__item">
                             <span class="">></span>
                         </li>
-                        <li class="breadcrumbs-nav-item">
-                            <a class="breadcrumbs-nav-item__link" href="./woman.html">Одежда</a>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Одежда</a>
                         </li>
-                        <li class="breadcrumbs-nav-item">
-                            <span class="">></span>
+                        <li class="breadcrumbs__item">
+                            <!-- <span class="">></span> -->
                         </li>
-                        <li class="breadcrumbs-nav-item">
-                            <a class="breadcrumbs-nav-item__link" id="breadcrumbs-place" href="#"></a>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" id="breadcrumbs-place" href="#"></a>
                         </li>
 
                     </ul>
                 </nav>
-                <div class="goods-woman-wrapper">
+                <div class="woman-main">
 
                     <aside class="category">
-                        <!-- <div class="breadcrumbs">
-                            <a href="#">Главная</a>
-                            <span>></span>
-                            <a href="#">Женщинам</a>
-                        </div> -->
                         <h5 class="category__title">Категории</h5>
-                        <ul class="category-list">
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__dresses"
+                        <ul class="category__list">
+                            <li class="category__item">
+                                <a href="#" class="category__link category-item__dresses"
                                     data-category="dresses">Платья</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__skirts"
-                                    data-category="skirts">Юбки</a>
+                            <li class="category__item">
+                                <a href="#" class="category__link category-item__skirts" data-category="skirts">Юбки</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__electron"
-                                    data-category="tops">Топы</a>
+                            <li class="category__item">
+                                <a href="#" class="category__link category-item__electron" data-category="tops">Топы</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__tops"
+                            <li class="category__item">
+                                <a href="#" class="category__link category-item__tops"
                                     data-category="svitera">Свитера</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__sport"
-                                    data-category="sport">Спорт</a>
+                            <li class="category__item">
+                                <a href="#" class="category__link category-item__sport" data-category="sport">Спорт</a>
                             </li>
                         </ul>
-                        <!-- <h5 class="category__title">Бренды</h5>
-                        <ul class="category-list">
-                            <li>
-                                <a href="#" class="category-item__link category-item__" data-category="dresses">Balmain</a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item__link category-item__" data-category="skirts">Balenciaga</a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item__link category-item__" data-category="tops">MaxMara</a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item__link category-item__" data-category="svitera">Prada</a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item__link category-item__" data-category="sport">Valentino</a>
-                            </li>
-                        </ul> -->
                     </aside>
-                    <div class="ba-row goods-wrapper">
+
+                    <div class="goods-wrapper ba-row">
+                        <!-- обертка для карточек товаров -->
                     </div>
                 </div>
             </div>
@@ -432,25 +411,30 @@
 
         <section class="subscribe">
             <div class="container">
-                <div class="subscribe-inner">
-                    <form class="subscribe-mail ba-col-12 ba-col-md-6">
+                <div class="subscribe__wrapper">
+                    <form class="subscribe-form ba-col-6 ba-col-md-6">
                         <span>Подписаться</span>
-                        <input class="subscribe-mail__input" type="email" class="ba-form__item" placeholder="Ваш email"
+                        <input class="subscribe-form__input" type="email" placeholder="Ваш email"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        <button class="subscribe-mail__btn btn_gray-brdr"><i class="fas fa-plus"></i></button>
+                        <button class="subscribe-form__btn btn_gray-brdr">
+                            <i class="fas fa-plus"></i>
+                        </button>
                         <!-- <span style="color: red; position: relative; top: -20px;">You entered wrong mail!!</span> -->
                     </form>
 
-                    <div class="ba-social ba-col-12 ba-col-md-4">
+                    <div class="ba-social ba-col-md-4 ba-col-6">
                         <span class="ba-social__descr ba-col-4">Мы здесь:</span>
 
-                        <div class="ba-social-wrapper">
-                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-facebook-f"
-                                    aria-hidden="true"></i></a>
-                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-twitter"
-                                    aria-hidden="true"></i></a>
-                            <a href="#" class="ba-social__items ba-col-4 btn_gray-brdr"><i class="fab fa-instagram"
-                                    aria-hidden="true"></i></a>
+                        <div class="ba-social__wrapper">
+                            <a class="ba-social__link ba-col-4 btn_gray-brdr" href="#">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a class="ba-social__link ba-col-4 btn_gray-brdr" href="#">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a class="ba-social__link ba-col-4 btn_gray-brdr" href="#">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -472,13 +456,13 @@
 
         <section class="map-section">
             <div class="container">
-                <div class="map-section__inner">
+                <div class="map-section__wrapper">
                     <div class="ba-col-4">
                         <h5>Наши магазины:</h5>
                         <h6>Харьков</h6>
-                        <i class="fas fa-map-marker-alt"></i> <span>ул.Cумская 75</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ул.Cумская 75</span>
                         <!-- <h6>Киев</h6> -->
-
                     </div>
                     <div class="map-section__google scroll-to ba-col-8" id="map">
                         <script>
@@ -683,10 +667,10 @@
 
     <footer class="ba-footer">
         <div class="container">
-            <span class="ba-footer__items">© Lookshop.com, 2020 All Rights Reserved</span>
-            <a href="#" class="ba-footer__items">Возврат</a>
-            <a href="#" class="ba-footer__items">Доставка</a>
-            <a href="#" class="ba-footer__items">Заказы
+            <span class="ba-footer__item">© Lookshop.com, 2020 All Rights Reserved</span>
+            <a href="#" class="ba-footer__item">Возврат</a>
+            <a href="#" class="ba-footer__item">Доставка</a>
+            <a href="#" class="ba-footer__item">Заказы
 
                 <!-- <div class="ba-social ba-col-12 ba-col-md-4">
                     <div class="ba-social-wrapper">
@@ -699,47 +683,39 @@
                     </div>
                 </div> -->
             </a>
-            </!-->
     </footer>
 
     <div class="cart">
-        <div class="cart-body">
-            <div class="cart-head">
-                <div class="cart-title">Корзина</div>
-                <div class="cart-total">Общая сумма: <span>0</span> грн</div>
+        <div class="cart__body">
+            <div class="cart__body-head">
+                <div class="cart__body-head-title">Корзина</div>
+                <div class="cart__body-head-total">Общая сумма: <span>0</span> грн</div>
             </div>
 
-            <div class="cart-wrapper">
+            <div class="cart__wrapper">
                 <div id="cart-empty">
                     Ваша корзина пока пуста
                 </div>
 
-                <div class="goods">
-                    <div class="goods-img-wrapper">
-                        <!-- <img class="goods-img" src="img/temp.png" alt=""> -->
+                <!-- <div class="goods">
+                    <div class="goods__img-wrapper"></div>
 
+                    <div class="goods__description">
+                        <h2 class="goods__description-title">Название товара</h2>
+                        <p class="goods__description-price">100000 грн</p>
                     </div>
-                    <div class="goods-description">
-                        <h2 class="goods-title">Название товара</h2>
-                        <p class="goods-price">100000 грн</p>
 
-                    </div>
-                    <div class="goods-price-count">
-                        <div class="goods-trigger">
+                    <div class="goods__price-count">
+                        <div class="goods__trigger">
                             <button class="goods-add-wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
                             <button class="goods-delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </div>
                         <div class="goods-count">1</div>
                     </div>
-                </div>
-
-
+                </div> -->
             </div>
-
             <button class="btn btn-primary cart-confirm">Оформить заказ</button>
-            <div class="cart-close">
-
-            </div>
+            <div class="cart-close"></div>
         </div>
     </div>
 
@@ -749,7 +725,7 @@
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
     <!--  <script src="https://kit.fontawesome.com/1c19972f1c.js" crossorigin="anonymous"></!-->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src='./js/index.js'></script>
 
     <!-- <script src="//code.jivosite.com/widget/CDvr0Rm1YG" async></script> -->

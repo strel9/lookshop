@@ -7,11 +7,8 @@ $colWidth: 100% / $col;
 $primaryColor: #fd926d;
 // $secondaryColor: #4e4e4e;
 $secondaryColor: #232323;
-
 // $threeColor: #232323;
-
 // $btnBorderColor: $primaryColor;
-
 
 * {
     box-sizing: border-box
@@ -23,7 +20,6 @@ $secondaryColor: #232323;
     margin: 0 auto;
     padding: 0 $gap;
 }
-/* Ba-grid  */
 .ba-row {
     display: flex;
     flex-wrap: wrap;
@@ -47,33 +43,6 @@ $secondaryColor: #232323;
     }
 }
 
-
-// mixins
-@mixin buttonHover {
-    background-color: gray;
-    // border-color: darken($btnBorderColor, 15%)
-}
-
-
-
-
-/* ba-common */
-
-.ba-text-center {
-    text-align: center;
-}
-
-.ba-text-left {
-    text-align: left;
-}
-
-.ba-text-right {
-    text-align: right;
-}
-
-.ba-text-justify {
-    text-align: justify;
-}
 // больше чем 768px
 @media screen and (min-width: 576px) {
     .ba-col-sm-12 {
@@ -252,3 +221,26 @@ $secondaryColor: #232323;
 //         display: none !important;
 //     }
 // }
+
+// mixins
+@mixin buttonHover {
+    background-color: gray;
+    // border-color: darken($btnBorderColor, 15%)
+}
+
+/* ba-common */
+.ba-text-center {
+    text-align: center;
+}
+
+.ba-text-left {
+    text-align: left;
+}
+
+.ba-text-right {
+    text-align: right;
+}
+
+.ba-text-justify {
+    text-align: justify;
+}
