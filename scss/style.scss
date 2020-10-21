@@ -436,6 +436,11 @@
 		&-price {
 			color: $secondaryColor;
 		}
+		// &-del {
+		// 	color: red;
+		// 	background-color: black;
+		// 	border: #000 1px solid;
+		// }
 	}
 
 	&__add-cart {
@@ -645,7 +650,7 @@
 	}
 }
 
-.goodsIncart-wrapper {
+.good-in-cart {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;

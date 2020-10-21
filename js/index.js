@@ -9,7 +9,6 @@ const cart = document.querySelector('.cart');
 const cartWrapper = document.querySelector('.cart__wrapper');
 const cartCounter = cartBtn.querySelector('.shopping__counter');
 const category = document.querySelector('.category');
-// console.log('wishlistCounter: ', wishlistCounter);
 const breadActiv = document.getElementById('breadcrumbs-place');
 const womanPage = document.querySelector('.woman-page');
 const baHero = document.querySelector('.ba-hero');
@@ -128,17 +127,17 @@ const openCart = () => {
 };
 
 //запрос в локалсторедж для козины
-const storageQueryBasket = (get) => {
-	if (get) {
-		// return localStorage.getItem('look-wishlist');
-		if (localStorage.getItem('look-basket')) {
-			JSON.parse(localStorage.getItem('look-basket')).forEach((id) => goodsBasket.push(id));
-		}
-	} else {
-		localStorage.setItem('look-basket', JSON.stringify(goodsBasket));
-	}
-	checkCount();
-};
+// const storageQueryBasket = (get) => {
+// 	if (get) {
+// 		// return localStorage.getItem('look-wishlist');
+// 		if (localStorage.getItem('look-basket')) {
+// 			JSON.parse(localStorage.getItem('look-basket')).forEach((id) => goodsBasket.push(id));
+// 		}
+// 	} else {
+// 		localStorage.setItem('look-basket', JSON.stringify(goodsBasket));
+// 	}
+// 	checkCount();
+// };
 
 //рендер корзины окна
 const renderBasket = () => {
@@ -146,29 +145,20 @@ const renderBasket = () => {
 
 	if (goodsBasket.length) {
 		goodsBasket.forEach((item) => {
-			// const { id, title, brand, price, imgCart } = item;
-			// cartWrapper.append(createCartGoodsBasket(id, title, brand, price, imgCart));
 			cartWrapper.append(createCartGoodsBasket(item));
-			// console.log(item);
 		});
 	} else {
 		cartWrapper.innerHTML = '<div id="cart-empty">Ваша корзина пуста</div >';
 	}
-	console.log(goodsBasket.length);
+	// console.log(goodsBasket.length);
 };
 
-//рендер товаров в корзине
-// const createCartGoodsBasket = (id, title, brand, price, img) => {
-// const createCartGoodsBasket = (cartId, quantity) => {
-const createCartGoodsBasket = ({ brand, title, price, quantity }) => {
-	const cart = document.createElement('div');
-	const img = './img/girl_2.jpg';
-	// console.log(item);
-	// const brand = 'ТЕСТ';
-	// const title = 'ТЕСТ';
-	// const price = 'ЦЕНА ТЕСТ';
-	cart.className = 'goodsIncart-wrapper';
-	cart.innerHTML = `	<div class="card">
+//рендер товара в корзине
+const createCartGoodsBasket = ({ brand, title, price, quantity, img }) => {
+	const element = document.createElement('div');
+
+	element.className = 'good-in-cart';
+	element.innerHTML = `	<div class="card">
 							<div class="card__top">
 								<img class="card__img" src="${img}" alt="${title}">
 							</div>
@@ -180,47 +170,34 @@ const createCartGoodsBasket = ({ brand, title, price, quantity }) => {
 						<div>
 							<p class="card__body-price">${price}<i class="fas fa-hryvnia"></i></p>
 							<p class="card__body-quantity">${quantity}</p>
-							<button>перенести в вишлист</button>
-							<button>удалить</button>
+							<a href="#" class="card__body-del btn">удалить</a>
 						</div>
 						`;
-	return cart;
+	return element;
 };
-// addBasket(target.dataset.goodsId, target);
-// console.log('target.dataset.goodsId, target: ', event.target.dataset.goodsId);
 
 // счетчик на корзине и вишлисте
 const checkCount = () => {
 	wishlistCounter.textContent = wishlist.length;
 	cartCounter.textContent = goodsBasket.length;
-	// console.log('wishlistCounter: ', wishlistCounter);
-	// console.log('wishlist.length: ', wishlist.length);
 };
 
 // добавляение в массив корзины
 const addBasket = (id, element) => {
-	// goodsBasket.includes(element => {
-	// });
 	if (element.cartId === id) {
-		// goodsBasket.splice(goodsBasket.indexOf(id), 1);
 	} else {
-		// const a = { id, 1};
 		const brand = element.parentNode.querySelector('.card__body-brand').innerText;
 		const title = element.parentNode.querySelector('.card__body-title').innerText;
 		const price = element.parentNode.querySelector('.card__body-price').innerText;
-
-		goodsBasket.push({ cartId: id, brand, title, price, quantity: 1 });
-		// console.log(goodsBasket);
+		const img = element.parentNode.parentNode
+			.querySelector('.card__top')
+			.firstElementChild.src.substr(33);
+		goodsBasket.push({ cartId: id, brand, title, price, quantity: 1, img });
+		console.log(goodsBasket);
 	}
 
-	// if (goodsBasket[id]) {
-	//     goodsBasket[id] += 1
-	// } else {
-	//     goodsBasket[id] = 1
-	// }
-	// console.log('goodsBasket: ', goodsBasket);
 	checkCount();
-	storageQueryBasket();
+	// storageQueryBasket();
 };
 
 // переключение сердечка
@@ -243,7 +220,6 @@ const handlerGoods = (e) => {
 	const target = e.target;
 
 	if (target.classList.contains('card__add-wishlist-heart')) {
-		// console.log(target.parentNode.dataset.goodsId);
 		toggleWishlist(target.parentNode.dataset.goodsId, target);
 	}
 
@@ -251,7 +227,6 @@ const handlerGoods = (e) => {
 		addBasket(target.dataset.goodsId, target);
 		// console.log(target.dataset.goodsId);
 		// console.log(target);
-		// console.log(target.dataset.goodsPrice);
 	}
 };
 
@@ -305,6 +280,10 @@ const searchGoods = (e) => {
 
 	// input.value = '';
 };
+
+// const delGoodFromCart = (arr, el) => {
+// 	arr.filter((item) => item.cartId !==);
+// };
 
 cartBtn.addEventListener('click', openCart);
 cart.addEventListener('click', closeCart);

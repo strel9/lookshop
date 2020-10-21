@@ -583,7 +583,7 @@
   .goods-count-total {
     width: 32px; }
 
-.goodsIncart-wrapper {
+.good-in-cart {
   display: flex;
   width: 100%;
   justify-content: space-between;
