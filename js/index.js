@@ -164,7 +164,7 @@ const createCartGoodsBasket = ({ brand, title, price, quantity, img }) => {
 							</div>
 							<div class="card__body">
 								<p class="card__body-brand">${brand}</p>
-								<a class="card__body-title" href="#">${title}</a>
+								<p class="card__body-title">${title}</p>
 							</div>
 						</div>
 						<div>
@@ -191,9 +191,9 @@ const addBasket = (id, element) => {
 		const price = element.parentNode.querySelector('.card__body-price').innerText;
 		const img = element.parentNode.parentNode
 			.querySelector('.card__top')
-			.firstElementChild.src.substr(33);
+			.firstElementChild.src.substr(34);
 		goodsBasket.push({ cartId: id, brand, title, price, quantity: 1, img });
-		console.log(goodsBasket);
+		// console.log(goodsBasket);
 	}
 
 	checkCount();
