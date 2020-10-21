@@ -54,7 +54,6 @@ const getGoods = (handler, filter) => {
 	loader();
 	fetch('db/db.json')
 		.then((response) => response.json())
-		// .then((data) => console.log(data));
 		.then(filter)
 		.then(handler);
 };
@@ -258,12 +257,16 @@ const handlerGoods = (e) => {
 
 // вывести товары вишлиста
 const showWishlist = () => {
+	baHero.classList.add('hide');
+	baBrands.classList.add('hide');
+	baBaners.classList.add('hide');
 	getGoods(renderCard, (goods) => goods.filter((item) => wishlist.includes(item.id)));
 };
 
 // вкладка woman
 const showWoman = (e) => {
 	e.preventDefault();
+	getGoods(renderCard);
 	baHero.classList.add('hide');
 	baBrands.classList.add('hide');
 	baBaners.classList.add('hide');
